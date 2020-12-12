@@ -1,5 +1,33 @@
 .App {
   text-align: center;
+  background-color: blueviolet;
+  height: 200px;
+  margin-top: -25px;
+  margin-bottom: 10px;
+}
+
+.HeaderTop {
+  text-align: center;
+  background-color: blueviolet;
+  height: 200 px;
+  margin-top: -25px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.Dark-Section{
+  background-color: #1dc9c9;
+  
+  padding: 100px;
+  height: 150px;
+}
+
+.Light-Section{
+  background-color: #20acbe;
+  padding: 100px;
+  height:300px;
+  margin-top: -25px;
+
 }
 
 .App-logo {
@@ -23,9 +51,20 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+@media (prefers-reduced-motion: no-preference) {
+  .names {
+    animation: Name-Enter 1 2s linear;
+    text-align: left;
+    letter-spacing: 5px;
+    margin-left: 15px;
+    font-size: 70px;
+    color: rgb(172, 189, 219);
+    margin-top: -80px;
+  }
+}
 
 .App-link {
-  color: #61dafb;
+  color: #c4e6f0;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +75,89 @@
     transform: rotate(360deg);
   }
 }
+
+.description{
+  color: rgb(179, 179, 218);
+  margin-top: -10px;
+  margin-bottom: 30px;
+  
+}
+
+
+
+
+
+.button-home{
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(238, 117, 61);
+  color: antiquewhite;
+  margin-left: 69%;
+
+  
+}
+.button-home:hover{
+  transform: translateY(-0.25rem);
+  transition: transform 200ms;
+  cursor:pointer;
+  background-color: rgb(235, 149, 109);
+
+}
+
+.button-about{
+  padding: 15px;
+  border-radius: 5px;
+ margin-top: 60px;
+  background-color: rgb(238, 117, 61);
+  color: antiquewhite;
+  
+}
+.button-about:hover{
+  transform: translateY(-0.25rem);
+  transition: transform 200ms;
+  cursor:pointer;
+  background-color: rgb(235, 149, 109);
+
+}
+.button-signup{
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(238, 117, 61);
+  color: antiquewhite;
+  
+}
+.button-signup:hover{
+  transform: translateY(-0.25rem);
+  transition: transform 200ms;
+  cursor:pointer;
+  background-color: rgb(235, 149, 109);
+
+}
+
+.button-viewed{
+
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(238, 117, 61);
+  color: antiquewhite;
+
+  
+}
+.button-viewed:hover{
+  transform: translateY(-0.25rem);
+  transition: transform 200ms;
+  cursor:pointer;
+  background-color: rgb(235, 149, 109);
+
+}
+
+.hor-flex{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+
+
