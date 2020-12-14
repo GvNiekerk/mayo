@@ -1,0 +1,148 @@
+.card{
+    width: 500px;
+    height: 200px;
+    background: rgb(207, 205, 205);
+    color: #3e508b;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 1px black;
+    overflow: hidden;
+    margin-left: 18%;
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 200px;
+    padding-right: 200px;
+    transition: 0.6s;
+
+}
+.card:hover{
+    background: whitesmoke;
+  transform: scale(1.1);
+  cursor:pointer;
+
+}
+
+.price{
+    margin-top: -135px;
+    margin-left: 550px;
+    font-size: 37px;
+
+}
+
+.rate{
+    margin-top: -30px;
+    margin-left: 550px;
+    font-size: 20px;
+
+}
+
+.upper-container{
+    height: 100px;
+    background: linear-gradient(to left,#2d00f7,#ff0291);
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.image-container img{
+    background: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 5px;
+    margin-left: -900px;
+    transform: translate(95px,45px);
+}
+
+img{
+    border: 2px solid #8e00b9;
+}
+
+.lower-container{
+    height: 300px;
+    margin-top: 60px;
+    background: blueviolet;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.lower-container h3,h4,p{
+    margin: 0;
+    padding: 0;
+}
+
+.lower-container h3{
+    color: #2f2d2e;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.lower-container h4{
+    color: #8e00b9;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.lower-container p{
+    margin: 1rem;
+    font-family: sans-serif;
+    color: #2f2d2e;
+    font-size: 0.9rem;
+    text-align: justify;
+    font-weight: 300;
+}
+.busname{
+    text-align: left;
+    margin-top: -100px;
+    font-size: 25px;
+    margin-left: 132px;
+}
+
+button{
+    margin: 1rem;
+    color: #fff9fc;
+    font: bold;
+    background-color: rgb(135, 88, 148);
+    border: 2px solid #4f2161;
+    padding: 0.6rem;
+    margin-top: 40px;
+    border-radius: 6px;
+    transition-duration: 0.5s;
+    animation: ease-in-out;
+}
+
+button:hover{
+    background-image: linear-gradient(to left,#2d00f7,#ff0291);
+    transform: scale(1.2);
+    border: none;
+    color: white;
+}
+
+.cards{
+    width: 500px;
+    height: 400px;
+    background: rgb(207, 205, 205);
+    color: #3e508b;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 1px black;
+    overflow: hidden;
+    margin-left: 18%;
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 200px;
+    padding-right: 200px;
+    
+
+}
+
+.backknoppie{
+    position: relative; left: 420px; top: -130px;
+    background-color: rgb(204, 72, 72);
+}
+.backknoppie:hover{
+    position: relative; left: 420px; top: -130px;
+    background-color: rgb(204, 72, 72);
+    cursor: pointer;
+ 
+}
+
+

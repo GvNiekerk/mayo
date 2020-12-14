@@ -1,9 +1,18 @@
 .App {
   text-align: center;
   background-color: blueviolet;
-  height: 200px;
-  margin-top: -25px;
+  height: 2000px;
+  margin-top: 80px;
   margin-bottom: 10px;
+  
+}
+
+.navhead{
+  text-align: center;
+  background-color: rgb(91, 85, 97);
+  height: 110px;
+  margin-top: -90px;
+  
 }
 
 .HeaderTop {
@@ -41,6 +50,22 @@
   }
 }
 
+.heading{
+  animation: Name-Enter 1 2s linear;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 40px;
+  color: rgb(188, 178, 201);
+  margin-top: -200px;
+}
+
+.para{
+  background-color: blueviolet;
+  color: aliceblue;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -59,7 +84,7 @@
     margin-left: 15px;
     font-size: 70px;
     color: rgb(172, 189, 219);
-    margin-top: -80px;
+
   }
 }
 
@@ -83,18 +108,26 @@
   
 }
 
-
-
-
+.search-field
+{
+  height: 50px;
+  padding: 10px;
+  padding-left: 100px;
+  border: 2px;
+  border-radius: 15px;
+  outline: 2px;
+  margin-top: -30px;
+  margin-left: 5px;
+}
 
 .button-home{
   padding: 15px;
   border-radius: 5px;
-  background-color: rgb(238, 117, 61);
+  background-color: rgb(204, 103, 250);
   color: antiquewhite;
-  margin-left: 69%;
-
-  
+  margin-left: 60%;
+  margin-top: -10%;
+  position: relative; left: 20px; top: -170px;
 }
 .button-home:hover{
   transform: translateY(-0.25rem);
@@ -107,9 +140,10 @@
 .button-about{
   padding: 15px;
   border-radius: 5px;
- margin-top: 60px;
-  background-color: rgb(238, 117, 61);
+  margin-top: 60px;
+  background-color: rgb(204, 103, 250);
   color: antiquewhite;
+  position: relative; left: 20px; top: -170px;
   
 }
 .button-about:hover{
@@ -122,8 +156,9 @@
 .button-signup{
   padding: 15px;
   border-radius: 5px;
-  background-color: rgb(238, 117, 61);
+  background-color: rgb(204, 103, 250);
   color: antiquewhite;
+  position: relative; left: 20px; top: -170px;
   
 }
 .button-signup:hover{
@@ -133,15 +168,31 @@
   background-color: rgb(235, 149, 109);
 
 }
+.search-btn
+{
+  height: 50px;
+  width: 150px;
+  background-color: rgb(204, 103, 250);
+  border: none;
+  color: #000;
+  border-radius: 25px;
+  margin-left: 40px;
+  margin-top: 5px;
+  justify-items: top;
+}
+.search-btn:hover{
+  background: #ffc107;
+  cursor: pointer;
+}
+
 
 .button-viewed{
 
   padding: 15px;
   border-radius: 5px;
-  background-color: rgb(238, 117, 61);
+  background-color: rgb(204, 103, 250);
   color: antiquewhite;
-
-  
+  position: relative; left: 20px; top: -170px;
 }
 .button-viewed:hover{
   transform: translateY(-0.25rem);
@@ -158,6 +209,87 @@
   justify-content: center;
 }
 
+.greenBtn{
+  background-color: #35cb9d;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 6px;
+  box-shadow: 6px 6px #a421c5;
+  margin: 10px;
+}
 
+.blueBtn{
+  background-color: #385fcb;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 6px;
+  box-shadow: 6px 6px #a421c5;
+  margin: 10px;
+}
 
+.RegisterBox{
+  background-color: #904edb;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  border-radius: 10px;
+}
+
+.whiteInput{
+  background-color: white;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 10px 30px;
+  border-radius: 6px;
+  box-shadow: 6px 6px #a421c5;
+  margin: 10px;
+}
+
+.largeInput{
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 50px 130px;
+  border-radius: 6px;
+  box-shadow: 6px 6px #a421c5;
+  margin: 10px;
+}
+
+.App-header {
+  background-color:blueviolet;
+  min-height: 800px;
+  display: flex;
+  margin-top: -330px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.detailedbackround{
+  background-color: blueviolet;
+  height: 300px;
+}
+
+.card{
+  width: 500px;
+  height: 200px;
+  background: rgb(207, 205, 205);
+  color: #3e508b;
+  border-radius: 10px;
+  box-shadow: 0px 1px 10px 1px black;
+  overflow: hidden;
+  margin-left: 18%;
+  margin-top: 15px;
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 200px;
+  padding-right: 200px;
+}
 

@@ -17,7 +17,7 @@ class recentview extends Component
                <div>
                  </div>
                  <div>
-                 <h1 className="names">Recently viewed listings</h1>
+                 <h2 className="heading">Recently viewed listings</h2>
                  </div>
  
             </div>
