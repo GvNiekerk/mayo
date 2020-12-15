@@ -7,6 +7,10 @@ import './App.css';
 class detailedlisting extends Component 
 {
 
+    handleChange(event){
+        window.alert("exit");
+    }
+
     constructor(props)
      {
         super(props);
@@ -19,7 +23,7 @@ class detailedlisting extends Component
         <div className="cards">
             <h3>Tel Number : 0854589784</h3>
             <h3>Email: waynesworld@gmail.com</h3>
-            <button className="backknoppie">X</button>
+            <button onClick={this.handleChange} className="backknoppie">X</button>
 		</div>
         );
     }

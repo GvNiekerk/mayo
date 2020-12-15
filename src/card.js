@@ -1,15 +1,33 @@
 import { Component } from "react";
 import './card.css';
 import App from './App';
+import axios from 'axios';
+
 
 import image from "./linda.jpg"
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import detaillist from "./detailedlisting";
 
+var email = "";
+var busName = "";
+var cell = "";
+var basicdesc = "";
+var detaildesc = "";
+var password = "";
 
 
 class card extends Component 
 {
+    getListing(){
+        var data = {"userEmail":"jan@janmail.com"};
+        axios.post("http://localhost:3000/getlisting/getlisting", data,{ 
+        })
+        .then(res => {
+          console.log(res.body);
+        })
+    }
+
+
     render()
     {
         return (
@@ -29,7 +47,7 @@ class card extends Component
                 <h3 className="price">R400</h3>
                 <h3 className="rate">p/h</h3>
             </div>
-
+            {this.getListing()}
         </div>
         </Link>
         <Switch>
