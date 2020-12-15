@@ -2,11 +2,57 @@ import './App.css';
 import { Component } from "react";
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import signup from './signup';
+import Cookies from 'universal-cookie';
 
 
 class Login extends Component {
+    constructor(props) {
+        super(props);
 
+        this.state = { userEmail: '', userPassword: ''}
 
+        this.handleChange = this.handleChange.bind(this);
+        this.RequestLogin = this.RequestLogin.bind(this);
+    }
+
+    handleChange(event){
+        switch (event.target.name) {
+            case 'userEmail':
+                this.setState({ userEmail: event.target.value })
+                break;
+            case 'userPassword':
+                this.setState({ userPassword: event.target.value })
+                break;
+        }
+    }
+
+    RequestLogin(event) {
+        event.preventDefault();
+
+        var req = {
+            userEmail: this.state.userEmail,
+            userPassword: this.state.userPassword
+        }
+
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json')
+
+        fetch("/auth/login", {
+            method: "post",
+            headers: headers,
+            body: JSON.stringify(req),
+        }).then((response) => {
+            if (response.ok) {
+               // const cookies = new Cookies();
+                //cookies.set('token', response.headers.get('auth-token'), { path: "/login" })
+               // window.location.reload();
+               alert("Login successful")
+            }
+            else{
+                alert("Invalid Login")
+            }
+        })
+    }
 
 render() {
     return (

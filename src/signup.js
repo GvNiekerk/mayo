@@ -2,11 +2,25 @@ import { Component } from "react";
 import './App.css';
 import axios from 'axios';
 
+var email = "";
+var busName = "";
+var cell = "";
+var basicdesc = "";
+var detaildesc = "";
+var password = "";
+
 
 class signup extends Component 
 {
     register = () => {
-        var data = {"_id":"5fd76adaef08a735b49b6d4a","userEmail":"kwert@anusmail.com","userPassword":"anus1235","companyname":"Anus dewald corp","basicdesc":"ons het dewald anusse","detaildesc":"ons het baie dewald anusse"};
+        email = document.getElementById('emailtxt').value;
+        busName = document.getElementById('bustxt').value;
+        cell = document.getElementById('celltxt').value;
+        basicdesc = document.getElementById('basictxt').value;
+        detaildesc = document.getElementById('detailtxt').value;
+        password = document.getElementById('passtxt').value;
+
+        var data = {"userEmail":email,"userPassword":password,"companyname":busName,"basicdesc":basicdesc,"detaildesc":detaildesc};
         axios.post("http://localhost:3000/auth/register", data,{ 
         })
         .then(res => {
@@ -28,12 +42,12 @@ class signup extends Component
               
                 <div className="RegisterBox">
                     <h1>Register</h1>
-                    <input onChange={this.handleChange} name="email" className="whiteInput" placeholder="email" />
-                    <input onChange={this.handleChange} name="businessName" className="whiteInput" placeholder="Business Name" />
-                    <input onChange={this.handleChange} name="cellNo" className="whiteInput" placeholder="Cellphone Number" />
-                    <input onChange={this.handleChange} name="basicDesc" className="whiteInput" placeholder="Basic Description" />
-                    <input onChange={this.handleChange} name="detailDesc" className="largeInput" placeholder="Detailed Description" />
-                    <input onChange={this.handleChange} name="password" className="whiteInput" placeholder="Password" type="password" />
+                    <input onChange={this.handleChange} name="email" id="emailtxt" className="whiteInput" placeholder="email" />
+                    <input onChange={this.handleChange} name="businessName" id="bustxt"  className="whiteInput" placeholder="Business Name" />
+                    <input onChange={this.handleChange} name="cellNo" id="celltxt"  className="whiteInput" placeholder="Cellphone Number" />
+                    <input onChange={this.handleChange} name="basicDesc" id="basictxt"  className="whiteInput" placeholder="Basic Description" />
+                    <input onChange={this.handleChange} name="detailDesc" id="detailtxt"  className="largeInput" placeholder="Detailed Description" />
+                    <input onChange={this.handleChange} name="password" id="passtxt"  className="whiteInput" placeholder="Password" type="password" />
                     <button onClick={this.register} className="blueBtn" type="submit">Register</button>
                  </div>
 
