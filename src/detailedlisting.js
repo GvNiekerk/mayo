@@ -1,14 +1,21 @@
 import { Component } from "react";
 import './App.css';
-
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import home from "./home";
 
 
 
 class detailedlisting extends Component 
 {
 
-    handleChange(event){
+    RequestClose(event){
         window.alert("exit");
+        <Router>
+        <Link to = "/"></Link>
+        <Switch>
+            <Route path= "/" component={home} />
+        </Switch>
+        </Router>
     }
 
     constructor(props)
@@ -23,7 +30,7 @@ class detailedlisting extends Component
         <div className="cards">
             <h3>Tel Number : 0854589784</h3>
             <h3>Email: waynesworld@gmail.com</h3>
-            <button onClick={this.handleChange} className="backknoppie">X</button>
+            <button onClick={this.RequestClose} className="backknoppie">X</button>
 		</div>
         );
     }

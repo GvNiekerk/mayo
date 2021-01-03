@@ -4,7 +4,7 @@
   height: 2000px;
   margin-top: 80px;
   margin-bottom: 10px;
-  
+  font-family: 'Montserrat', sans-serif;
 }
 
 .navhead{
@@ -255,7 +255,7 @@
   background-color: white;
   border: none;
   color: black;
-  padding: 50px 130px;
+  font-family: 'Montserrat', sans-serif;
   border-radius: 6px;
   box-shadow: 6px 6px #a421c5;
   margin: 10px;
