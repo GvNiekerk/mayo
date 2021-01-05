@@ -1,27 +1,25 @@
 import { Component } from "react";
 import './App.css';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
-import home from "./home";
+import homePage from "./home";
 
 
 
 class detailedlisting extends Component 
 {
 
-    RequestClose(event){
-        window.alert("exit");
-        <Router>
-        <Link to = "/"></Link>
-        <Switch>
-            <Route path= "/" component={home} />
-        </Switch>
-        </Router>
+    constructor(props){
+     
+        super(props);
+        this.RequestClose = this.RequestClose.bind(this);
     }
 
-    constructor(props)
-     {
-        super(props);
-     }
+
+    RequestClose(event){
+        //window.alert("exit");
+        return( <homePage/>
+        );
+    }
 
     render()
     {
@@ -30,7 +28,7 @@ class detailedlisting extends Component
         <div className="cards">
             <h3>Tel Number : 0854589784</h3>
             <h3>Email: waynesworld@gmail.com</h3>
-            <button onClick={this.RequestClose} className="backknoppie">X</button>
+            <button onClick={() => this.RequestClose} className="backknoppie">X</button>
 		</div>
         );
     }
