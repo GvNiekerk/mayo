@@ -5,6 +5,7 @@ import home from './home';
 import recentview from './recentview';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import login from './login';
+import logo from './logo.png';
 
 
 class Main extends Component 
@@ -18,8 +19,11 @@ class Main extends Component
     render()
     {
         return (
+        
         <div className = "navhead">
-               <h1 className="names">Mayo</h1>
+
+                <img className="logo" src={logo}/>
+                <h1 className="ayo">ayo</h1>
                <Router>
                 <Link to = "/">
                 <button className="button-home">Home</button>

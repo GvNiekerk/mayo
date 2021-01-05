@@ -3,6 +3,7 @@ import { Component } from "react";
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import signup from './signup';
 import Cookies from 'universal-cookie';
+import account from './account';
 
 
 class Login extends Component {
@@ -71,6 +72,7 @@ render() {
 
                 <Switch>
                 <Route path= "/signup" component={signup} />
+                <Route path= "/account" component={account}/>
                 </Switch>
                 </Router>
         </div>
