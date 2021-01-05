@@ -44,11 +44,20 @@ class signup extends Component
                 <div className="RegisterBox">
                     <h1>Register</h1>
                     <input onChange={this.handleChange} name="email" id="emailtxt" className="whiteInput" placeholder="email" />
-                    <input onChange={this.handleChange} name="businessName" id="bustxt"  className="whiteInput" placeholder="Business Name" />
-                    <input onChange={this.handleChange} name="cellNo" id="celltxt"  className="whiteInput" placeholder="Cellphone Number" />
+                    <input onChange={this.handleChange} name="businessName" id="bustxt"  className="whiteInput" placeholder="Company Name" />
+                    <input onChange={this.handleChange} name="cellNo" id="celltxt"  className="whiteInput" placeholder="Contact Number" />
+                    <input onChange={this.handleChange} name="cellNo" id="celltxt"  className="whiteInput" placeholder="Company Website URL (www.example.com)" />
+                    <input onChange={this.handleChange} name="cellNo" id="celltxt"  className="whiteInput" placeholder="Instagram URL (www.instagram.com/example)" />
+                    <input onChange={this.handleChange} name="cellNo" id="celltxt"  className="whiteInput" placeholder="Twitter URL (www.example.com)" />
+                    <input onChange={this.handleChange} name="cellNo" id="celltxt"  className="whiteInput" placeholder="Facebook URL (www.facebook.com/example)" />
                     <input onChange={this.handleChange} name="basicDesc" id="basictxt"  className="whiteInput" placeholder="Basic Description" />
-                    <textarea onChange={this.handleChange} rows="6" cols="40" name="detailDesc" id="detailtxt"  className="largeInput" placeholder="Detailed Description" />
+                    <textarea onChange={this.handleChange} rows="7" cols="50" name="detailDesc" id="detailtxt"  className="largeInput" placeholder="Detailed Description" />
+                    <p>Choose company logo:</p>
+                    <input type="file" className="fileup" name="file" />
+                    <p className="debittxt">Press the button below to download the debit order documents required to complete registration</p>
+                    <button onClick={this.RequestRegister} className="blueBtn" type="submit">Download Documents</button>
                     <input onChange={this.handleChange} name="password" id="passtxt"  className="whiteInput" placeholder="Password" type="password" />
+                    <input onChange={this.handleChange} name="password" id="passtxt"  className="whiteInput" placeholder="Confirm Password" type="password" />
                     <button onClick={this.RequestRegister} className="blueBtn" type="submit">Register</button>
                  </div>
 
