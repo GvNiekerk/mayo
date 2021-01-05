@@ -7,17 +7,19 @@ import homePage from "./home";
 
 class detailedlisting extends Component 
 {
-    constructor(props)
-     {
+
+    constructor(props){
+     
         super(props);
         this.RequestClose = this.RequestClose.bind(this);
-     }
-
-    RequestClose(event){
-        window.alert("exit");
-        return(<homePage/>);
     }
 
+
+    RequestClose(event){
+        //window.alert("exit");
+        return( <homePage/>
+        );
+    }
 
     render()
     {
@@ -26,7 +28,7 @@ class detailedlisting extends Component
         <div className="cards">
             <h3>Tel Number : 0854589784</h3>
             <h3>Email: waynesworld@gmail.com</h3>
-            <button onClick={this.RequestClose} className="backknoppie">X</button>
+            <button onClick={() => this.RequestClose} className="backknoppie">X</button>
 		</div>
         );
     }
