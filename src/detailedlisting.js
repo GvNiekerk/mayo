@@ -18,6 +18,19 @@ class detailedlisting extends Component
 
     }
 
+    facebookClick(event){
+        window.open('https://www.facebook.com/cashcrusadershartbees')
+    }
+
+    instaClick(event){
+        window.open('https://www.instagram.com/dewaldkokzero/')
+    }
+
+    twitClick(event){
+        window.open('https://twitter.com/elonmusk/')
+        
+    }
+
 
     RequestClose(event){
         this.setState({
@@ -35,9 +48,9 @@ class detailedlisting extends Component
                 <h3>Tel Number : 0854589784</h3>
                 <h3>Email: waynesworld@gmail.com</h3>
                 <button onClick={() => this.RequestClose()} className="backknoppie">X</button>
-                <img className="fb" src={face}/>
-                <img className="fb" src={insta}/>
-                <img className="fb" src={twit}/>
+                <img onClick={() => this.facebookClick()} className="fb" src={face}/>
+                <img onClick={() => this.instaClick()} className="fb" src={insta}/>
+                <img onClick={() => this.twitClick()} className="fb" src={twit}/>
                 </div>
                 :null
             }
