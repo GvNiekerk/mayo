@@ -12,9 +12,22 @@
   background-color: rgb(91, 85, 97);
   height: 7%;
   margin-top: -7%;
-  
 }
-
+.hyperlink{
+  font-size: large;
+  margin-right: 100px;
+  margin-left: 130px;
+  margin-bottom: 35%;
+}
+.estimateprice{
+  margin-top: -4.5%;
+  background-color: #8875a0;
+  border-radius: 7px;
+  font-size: medium;
+  padding-top: 7%;
+  padding-bottom: 5%;
+  color: #cfb9d3;
+}
 
 .HeaderTop {
   text-align: center;

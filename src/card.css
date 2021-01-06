@@ -119,7 +119,7 @@ button:hover{
 
 .cards{
     width: 500px;
-    height: 400px;
+    height: 420px;
     background: rgb(207, 205, 205);
     color: #3e508b;
     border-radius: 10px;
@@ -130,19 +130,16 @@ button:hover{
     font-family: 'Montserrat', sans-serif;
     padding-left: 200px;
     padding-right: 200px;
-    
-
 }
 
 .backknoppie{
-    position: relative; left: 420px; top: -130px;
+    position: relative; left: 510px; top: -300px;
     background-color: rgb(204, 72, 72);
 }
 .backknoppie:hover{
-    position: relative; left: 420px; top: -130px;
+    position: relative; left: 510px; top: -300px;
     background-color: rgb(204, 72, 72);
     cursor: pointer;
- 
 }
 
 

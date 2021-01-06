@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import face from './fb1.jpg';
 import insta from './insta1.jpg';
 import twit from './twit.jpg';
-
+import email from './email1.png';
 
 class detailedlisting extends Component 
 {
@@ -31,6 +31,16 @@ class detailedlisting extends Component
         
     }
 
+    mailClick(event){
+        window.open('https://twitter.com/elonmusk/')
+        
+    }
+    webClick(event){
+        window.open('www.facebook.com')
+        
+    }
+
+
 
     RequestClose(event){
         this.setState({
@@ -45,12 +55,22 @@ class detailedlisting extends Component
         <div>
             {this.state.showMe?
                 <div className="cards">
+                <h3 >Waynes world is a specilized electrician service specializing in vibrator rewiring and batery replacements aswell as a profesional plumbing service to fix your toilets and pipes in your home</h3>
                 <h3>Tel Number : 0854589784</h3>
-                <h3>Email: waynesworld@gmail.com</h3>
+                <h4><u>Estimated prices :</u></h4>
+                <dl className = "estimateprice">
+                    Geyser Fix      -     R400
+                    <br></br> Pipe Fix     -   R300
+                    <br></br>Toilet Fix  -    R200
+                </dl>
+                
                 <button onClick={() => this.RequestClose()} className="backknoppie">X</button>
                 <img onClick={() => this.facebookClick()} className="fb" src={face}/>
                 <img onClick={() => this.instaClick()} className="fb" src={insta}/>
                 <img onClick={() => this.twitClick()} className="fb" src={twit}/>
+                <img onClick={() => this.mailClick()} className="fb" src={email}/>
+                <a className="hyperlink" href="url" onClick={() => this.webClick()}><b>www.facebook.com</b></a>
+
                 </div>
                 :null
             }
