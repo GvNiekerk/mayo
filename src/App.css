@@ -316,6 +316,12 @@
   background-color: blueviolet;
   height: 300px;
 }
+.fb{
+  height: 12%;
+  width: 10%;
+  border: 5px;
+}
+
 
 .card{
   width: 500px;

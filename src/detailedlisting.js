@@ -1,9 +1,9 @@
 import { Component } from "react";
 import './App.css';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
-import homePage from "./home";
-import home from "./home";
-
+import face from './fb1.jpg';
+import insta from './insta1.jpg';
+import twit from './twit.jpg';
 
 
 class detailedlisting extends Component 
@@ -35,6 +35,9 @@ class detailedlisting extends Component
                 <h3>Tel Number : 0854589784</h3>
                 <h3>Email: waynesworld@gmail.com</h3>
                 <button onClick={() => this.RequestClose()} className="backknoppie">X</button>
+                <img className="fb" src={face}/>
+                <img className="fb" src={insta}/>
+                <img className="fb" src={twit}/>
                 </div>
                 :null
             }
