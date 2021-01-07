@@ -14,6 +14,11 @@ class footer extends Component
         super(props);
      }
 
+     topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+
     render()
     {
         return (
@@ -23,15 +28,17 @@ class footer extends Component
                <div>
                  </div>
                  <div>
-                 <h2 className="footerbutton">about</h2>
-                 <h2 className="footerbutton">Contact us</h2>
+                 <h2 className="foot">Contact us</h2>
                  <h2 className="footpar">Hippo Comparative Services (Pty) Ltd is an authorised financial service provider. FSP number: 16357. Block A, Steyn City Capital Park, Erling Road, Riverglen, Dainfern, 2191.</h2>
 
-                 <img onClick={() => this.facebookClick()} className="fb" src={face}/>
-                <img onClick={() => this.instaClick()} className="fb" src={insta}/>
-                <img onClick={() => this.twitClick()} className="fb" src={twit}/>
-                <img onClick={() => this.mailClick()} className="fb" src={email}/>
-                <h2 className="footerbutton">Tell : 072 041 7854 </h2>
+                 <img onClick={() => this.facebookClick()} className="fbfoot" src={face}/>
+                <img onClick={() => this.instaClick()} className="fbfoot" src={insta}/>
+                <img onClick={() => this.twitClick()} className="fbfoot" src={twit}/>
+                <img onClick={() => this.mailClick()} className="fbfoot" src={email}/>
+                <br/>
+                <br/>
+                <button className="search-btn" onClick={() => this.topFunction()} type="button">Back to top</button>
+
 
 
                  </div>

@@ -56,6 +56,7 @@ class signup extends Component
                     <input type="file" className="fileup" name="file" />
                     <p className="debittxt">Press the button below to download the debit order documents required to complete registration</p>
                     <button onClick={this.RequestRegister} className="blueBtn" type="submit">Download Documents</button>
+                    <h4>email documents to: www.mayo.com</h4>
                     <input onChange={this.handleChange} name="password" id="passtxt"  className="whiteInput" placeholder="Password" type="password" />
                     <input onChange={this.handleChange} name="password" id="passtxt"  className="whiteInput" placeholder="Confirm Password" type="password" />
                     <button onClick={this.RequestRegister} className="blueBtn" type="submit">Register</button>
