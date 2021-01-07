@@ -1,7 +1,8 @@
 import './App.css';
 import MainPage from './Main';
-import Card from './card';
 import React, {useState} from 'react';
+import Footer from './footer';
+
 function App() {
   const[name,setName] = useState('Your name');
   const[job,setJob] = useState('Your job');
@@ -10,7 +11,7 @@ function App() {
     return (
       <div className="App">
         <MainPage />      
-  
+        <Footer />
       </div>
     );
   }

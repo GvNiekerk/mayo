@@ -6,7 +6,20 @@
   margin-bottom: 10px;
   font-family: 'Montserrat', sans-serif;
 }
-
+.footer{
+  margin-top: 160%;
+  background-color: rgb(85, 72, 85);
+  padding-bottom: 10%;
+  bottom:0;
+}
+.footerbutton{
+  color: #c0adc4;
+}
+.footpar{
+  font-size: small;
+  color: #282c34;
+}
+  
 .navhead{
   text-align: center;
   background-color: rgb(91, 85, 97);
@@ -74,10 +87,17 @@
 }
 
 .para{
-  background-color: blueviolet;
-  color: aliceblue;
+  font-size: x-large;
+  background-color: rgb(156, 137, 173);
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 20px;
+  color: rgb(208, 219, 228);
   padding-left: 100px;
   padding-right: 100px;
+  padding-top: 2%;
+  padding-bottom: 1.5%;
+ 
 }
 
 .App-header {
@@ -251,6 +271,16 @@
   box-shadow: 6px 6px #a421c5;
   margin: 10px;
 }
+.aboutbtn{
+  background-color: #385fcb;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 6px;
+  box-shadow: 6px 6px #a421c5;
+  margin-top: 5%;
+}
+
 .ayo{
   margin-right: 71%;
   margin-top: -8%;
