@@ -1,10 +1,11 @@
 .App {
   text-align: center;
-  background-color: blueviolet;
+  background-image: url("Colour-bg1.png");
   height: 100%;
   margin-top: 80px;
   margin-bottom: 10px;
   font-family: 'Montserrat', sans-serif;
+  width: 100%;
 }
 .footer{
   margin-top: 360%;
