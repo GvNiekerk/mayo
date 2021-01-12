@@ -12,6 +12,15 @@ var password = "";
 
 class signup extends Component 
 {
+
+    constructor(props)
+    {
+       super(props);
+
+
+    }
+
+
     //Changed name to correct naming syntax
     RequestRegister = () => {
         email = document.getElementById('emailtxt').value;
@@ -21,9 +30,9 @@ class signup extends Component
         detaildesc = document.getElementById('detailtxt').value;
         password = document.getElementById('passtxt').value;
 
-        var data = {"userEmail":email,"userPassword":password,"companyname":busName,"basicdesc":basicdesc,"detaildesc":detaildesc};
-        axios.post("http://localhost:3000/auth/register", data,{ 
-        })
+        var data = JSON.stringify({"userEmail":email,"userPassword":password,"companyname":busName,"basicdesc":basicdesc,"detaildesc":detaildesc});
+        console.log(data);
+        axios.post("http://localhost:3000/auth/register", data,{})
         .then(res => {
           alert(res);
           console.log(res);
@@ -31,10 +40,6 @@ class signup extends Component
     }
     
 
-    constructor(props)
-     {
-        super(props);
-     }
 
     render()
     {
@@ -46,10 +51,10 @@ class signup extends Component
                     <input onChange={this.handleChange} name="email" id="emailtxt" className="whiteInput" placeholder="email" />
                     <input onChange={this.handleChange} name="businessName" id="bustxt"  className="whiteInput" placeholder="Company Name" />
                     <input onChange={this.handleChange} name="cellNo" id="celltxt"  className="whiteInput" placeholder="Contact Number" />
-                    <input onChange={this.handleChange} name="cellNo" id="celltxt"  className="whiteInput" placeholder="Company Website URL (www.example.com)" />
-                    <input onChange={this.handleChange} name="cellNo" id="celltxt"  className="whiteInput" placeholder="Instagram URL (www.instagram.com/example)" />
-                    <input onChange={this.handleChange} name="cellNo" id="celltxt"  className="whiteInput" placeholder="Twitter URL (www.example.com)" />
-                    <input onChange={this.handleChange} name="cellNo" id="celltxt"  className="whiteInput" placeholder="Facebook URL (www.facebook.com/example)" />
+                    <input onChange={this.handleChange} name="website" id="webtxt"  className="whiteInput" placeholder="Company Website URL (www.example.com)" />
+                    <input onChange={this.handleChange} name="instagram" id="instatxt"  className="whiteInput" placeholder="Instagram URL (www.instagram.com/example)" />
+                    <input onChange={this.handleChange} name="twitter" id="twittertxt"  className="whiteInput" placeholder="Twitter URL (www.example.com)" />
+                    <input onChange={this.handleChange} name="facebook" id="facetxt"  className="whiteInput" placeholder="Facebook URL (www.facebook.com/example)" />
                     <input onChange={this.handleChange} name="basicDesc" id="basictxt"  className="whiteInput" placeholder="Basic Description" />
                     <textarea onChange={this.handleChange} rows="7" cols="50" name="detailDesc" id="detailtxt"  className="largeInput" placeholder="Detailed Description" />
                     <p>Choose company logo:</p>

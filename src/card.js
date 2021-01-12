@@ -1,17 +1,10 @@
 import { Component } from "react";
 import './card.css';
-import App from './App';
 import axios from 'axios';
 import image from "./linda.jpg"
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import detaillist from "./detailedlisting";
 
-var email = "";
-var busName = "";
-var cell = "";
-var basicdesc = "";
-var detaildesc = "";
-var password = "";
 
 
 class card extends Component 
