@@ -31,22 +31,28 @@ class Login extends Component {
         event.preventDefault();
 
         var req = {
-            userEmail: this.state.userEmail,
-            userPassword: this.state.userPassword
+            
+                userEmail : document.getElementById('email').value,
+                userPassword : document.getElementById('password').value
+                
+            
         }
+
+        console.log(JSON.stringify(req));
 
         var headers = new Headers();
         headers.append('Content-Type', 'application/json')
 
-        fetch("/auth/login", {
+        fetch("http://localhost:3000/auth/login", {
             method: "post",
             headers: headers,
             body: JSON.stringify(req),
         }).then((response) => {
+            console.log(response);
             if (response.ok) {
-               // const cookies = new Cookies();
-                //cookies.set('token', response.headers.get('auth-token'), { path: "/login" })
-               // window.location.reload();
+                const cookies = new Cookies();
+                cookies.set('token', response.headers.get('auth-token'), { path: "/login" })
+                
                alert("Login successful")
             }
             else{
@@ -60,9 +66,9 @@ render() {
         <div className="App-header">
             
             <h1>Login</h1>
-                <input onChange={this.handleChange} name="email" className="whiteInput" placeholder="email" />
+                <input onChange={this.handleChange} name="email" id="email"  className="whiteInput" placeholder="email" />
                 <br />
-                <input onChange={this.handleChange} name="password" className="whiteInput" placeholder="password" type="password" />
+                <input onChange={this.handleChange} name="password" id="password" className="whiteInput" placeholder="password" type="password" />
                 <br />
                 <button onClick={this.RequestLogin} className="greenBtn" type="submit">Login</button>
                 <Router>
