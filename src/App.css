@@ -1,19 +1,19 @@
 
-
 .App {
   text-align: center;
   background-image: url("Colour-bg1.png");
+  background-attachment: fixed;
   height: 100%;
-  margin-top: 80px;
-  margin-bottom: 10px;
+  margin-top: 5%;
+  margin-bottom: 0%;
   font-family: 'Montserrat', sans-serif;
   width: 100%;
 }
 .footer{
   margin-top: 360%;
   background-color: rgb(85, 72, 85);
-  padding-bottom: 10%;
-  bottom:0;
+  padding-bottom: 0%;
+  bottom:20%;
 }
 .footerbutton{
   color: #c0adc4;
@@ -26,19 +26,19 @@
 .navhead{
   text-align: center;
   background-color: rgb(91, 85, 97);
-  height: 7%;
+  height: 17%;
   margin-top: -7%;
 }
 .hyperlink{
   font-size: large;
-  margin-right: 100px;
-  margin-left: 130px;
-  margin-bottom: 35%;
+  margin-right: 25%;
+  margin-left: 25%;
+  margin-bottom: 30%;
 }
 .estimateprice{
   margin-top: -4.5%;
   background-color: #8875a0;
-  border-radius: 7px;
+  border-radius: 10%;
   font-size: medium;
   padding-top: 7%;
   padding-bottom: 5%;
@@ -48,7 +48,7 @@
 .HeaderTop {
   text-align: center;
   background-color: blueviolet;
-  height: 200 px;
+  height: 100 px;
   margin-top: -25px;
   display: flex;
   flex-direction: row;
@@ -63,7 +63,7 @@
 
 .Light-Section{
   background-color: #20acbe;
-  padding: 100px;
+  padding: 200px;
   height:300px;
   margin-top: -25px;
 
@@ -83,10 +83,10 @@
 .heading{
   animation: Name-Enter 1 2s linear;
   text-align: center;
-  letter-spacing: 2px;
-  font-size: 40px;
+  letter-spacing: 4%;
+  font-size: 300%;
   color: rgb(188, 178, 201);
-  margin-top: -200px;
+  margin-top: -10%;
 }
 
 .para{
@@ -94,10 +94,10 @@
   background-color: rgb(156, 137, 173);
   margin-left: 10%;
   margin-right: 10%;
-  border-radius: 20px;
+  border-radius: 12%;
   color: rgb(208, 219, 228);
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
   padding-top: 2%;
   padding-bottom: 1.5%;
  
@@ -110,14 +110,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(10% + 2vmin);
+  color: rgb(248, 234, 234);
 }
 @media (prefers-reduced-motion: no-preference) {
   .names {
     animation: Name-Enter 1 2s linear;
     text-align: left;
-    letter-spacing: 5px;
+    letter-spacing: 100px;
     margin-left: 15px;
     font-size: 70px;
     color: rgb(172, 189, 219);
@@ -140,33 +140,33 @@
 
 .description{
   color: rgb(179, 179, 218);
-  margin-top: -10px;
-  margin-bottom: 30px;
+  margin-top: -50px;
+  margin-bottom: 20px;
   
 }
 
 .search-field
 {
-  height: 50px;
-  padding: 10px;
-  padding-left: 100px;
-  border: 2px;
-  border-radius: 15px;
-  outline: 2px;
-  margin-top: -30px;
-  margin-left: 5px;
+  height: 120%;
+  padding: 1.5%;
+  padding-left: 10%;
+  border: 10%;
+  border-radius: 25px;
+  outline: 10%;
+  margin-top: -10%;
+  margin-left: 2%;
 }
 
 .button-home{
-  padding: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
   margin-left: -0.5%;
   border-radius: 5px;
   background-color: rgb(204, 103, 250);
   color: antiquewhite;
   margin-left: 60%;
-  position: relative; left: 20px; top: -155px;
+  position: relative; left: 1%; top: -110px;
 }
 .button-home:hover{
   transform: translateY(-0.25rem);
@@ -177,15 +177,15 @@
 }
 
 .button-about{
-  padding: 15px;
+  padding: 1%;
   border-radius: 5px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-top: 60px;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-top: -10%;
   margin-left: -0.5%;
   background-color: rgb(204, 103, 250);
   color: antiquewhite;
-  position: relative; left: 20px; top: -155px;
+  position: relative; left: 1%; top: -110px;
   
 }
 .button-about:hover{
@@ -196,13 +196,13 @@
 
 }
 .button-signup{
-  padding: 15px;
+  padding: 1%;
   border-radius: 5px;
   background-color: rgb(204, 103, 250);
   color: antiquewhite;
-  position: relative; left: 20px; top: -155px;
-  padding-left: 30px;
-  padding-right: 30px;
+  position: relative; left: 1%; top: -110px;
+  padding-left: 2%;
+  padding-right: 2%;
   margin-left: -0.5%;
 }
 .button-signup:hover{
@@ -215,13 +215,13 @@
 .search-btn
 {
   height: 50px;
-  width: 150px;
+  width: 8%;
   background-color: rgb(204, 103, 250);
   border: none;
   color: #000;
   border-radius: 25px;
-  margin-left: 40px;
-  margin-top: 5px;
+  margin-left: 2%;
+  margin-top: -5%;
   justify-items: top;
 }
 .search-btn:hover{
@@ -232,13 +232,13 @@
 
 .button-viewed{
   margin-left: -0.5%;
-  padding: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
   border-radius: 5px;
   background-color: rgb(204, 103, 250);
   color: antiquewhite;
-  position: relative; left: 20px; top: -155px;
+  position: relative; left: 1%; top: -110px;
 }
 .button-viewed:hover{
   transform: translateY(-0.25rem);
@@ -259,34 +259,35 @@
   background-color: #35cb9d;
   border: none;
   color: white;
-  padding: 10px 30px;
+  padding: 1% 2%;
   border-radius: 6px;
-  box-shadow: 6px 6px #a421c5;
-  margin: 10px;
+  box-shadow: 6px 6px #070108;
+  margin: 1%;
 }
 
 .blueBtn{
-  background-color: #385fcb;
+  background-color: #292ce7;
   border: none;
   color: white;
-  padding: 10px 30px;
+  padding: 40% 50%;
   border-radius: 6px;
-  box-shadow: 6px 6px #a421c5;
-  margin: 10px;
+  box-shadow: 6px 6px #0a020c;
+  margin: 1%;
+  margin-right: 10%;
 }
 .aboutbtn{
   background-color: #385fcb;
   border: none;
   color: white;
-  padding: 10px 30px;
+  padding: 1% 3%;
   border-radius: 6px;
   box-shadow: 6px 6px #a421c5;
   margin-top: 5%;
 }
 
 .ayo{
-  margin-right: 71%;
-  margin-top: -8%;
+  margin-left: -74%;
+  margin-top: -7%;
   color: #fdfcfd;
   font-size: calc(45px + 2vmin);
 
