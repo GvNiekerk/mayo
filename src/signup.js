@@ -1,13 +1,8 @@
 import { Component } from "react";
 import './App.css';
 import axios from 'axios';
+import Cookies from 'universal-cookie';
 
-var email = "";
-var busName = "";
-var cell = "";
-var basicdesc = "";
-var detaildesc = "";
-var password = "";
 
 
 class signup extends Component 
@@ -17,26 +12,71 @@ class signup extends Component
     {
        super(props);
 
+       this.state = { email: '', password: '', businessName: '', basicDesc: '', detailDesc: '', cellNo: ''}
 
+       this.handleChange = this.handleChange.bind(this);
+       this.RequestRegister = this.RequestRegister.bind(this);
     }
 
+    handleChange(event){
+        switch (event.target.name) {
+            case 'email':
+                this.setState({ email: event.target.value })
+                break;
+            case 'password':
+                this.setState({ password: event.target.value })
+                break;
+            case 'password2':
+                this.setState({ password2: event.target.value })
+                break;
+            case 'businessName':
+                this.setState({ businessName: event.target.value })
+                break;  
+            case 'cellNo':
+                this.setState({ cellNo: event.target.value })
+                break; 
+            case 'basicDesc':
+                this.setState({ basicDesc: event.target.value })
+                break; 
+            case 'detailDesc':
+                this.setState({ detailDesc: event.target.value })
+                break; 
+        }
+    }
 
     //Changed name to correct naming syntax
-    RequestRegister = () => {
-        email = document.getElementById('emailtxt').value;
-        busName = document.getElementById('bustxt').value;
-        cell = document.getElementById('celltxt').value;
-        basicdesc = document.getElementById('basictxt').value;
-        detaildesc = document.getElementById('detailtxt').value;
-        password = document.getElementById('passtxt').value;
+    RequestRegister(event){
+        event.preventDefault();
 
-        var data = JSON.stringify({"userEmail":email,"userPassword":password,"companyname":busName,"basicdesc":basicdesc,"detaildesc":detaildesc});
-        console.log(data);
-        axios.post("http://localhost:3000/auth/register", data,{})
-        .then(res => {
-          alert(res);
-          console.log(res);
-          })
+        var req = {
+            userEmail: this.state.email,
+            userPassword: this.state.password,
+            userPassword2: this.state.password2,
+            companyname: this.state.businessName,
+            cellNum: this.state.cellNo,
+            basicdesc: this.state.basicDesc,
+            detaildesc: this.state.detailDesc
+        }
+
+        console.log(JSON.stringify(req));
+
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json')
+
+        fetch("http://localhost:3000/auth/register", {
+            method: "post",
+            headers: headers,
+            body: JSON.stringify(req),
+        }).then((response) => {
+            if (response.ok) {
+                const cookies = new Cookies();
+                cookies.set('token', response.headers.get('auth-token'), { path: "/register" })
+                alert("Success");
+            }
+            else{
+                alert("Invalid Login")
+            }
+        })
     }
     
 
@@ -63,7 +103,7 @@ class signup extends Component
                     <button onClick={this.RequestRegister} className="blueBtn" type="submit">Download Documents</button>
                     <h4>email documents to: www.mayo.com</h4>
                     <input onChange={this.handleChange} name="password" id="passtxt"  className="whiteInput" placeholder="Password" type="password" />
-                    <input onChange={this.handleChange} name="password" id="passtxt"  className="whiteInput" placeholder="Confirm Password" type="password" />
+                    <input onChange={this.handleChange} name="password2" id="pass2txt"  className="whiteInput" placeholder="Confirm Password" type="password" />
                     <button onClick={this.RequestRegister} className="blueBtn" type="submit">Register</button>
                  </div>
 
