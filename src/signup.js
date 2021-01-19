@@ -11,7 +11,7 @@ class signup extends Component
     constructor(props)
     {
        super(props);
-
+        //{email: '', businessName: '', cellNo: '', website: '', instagram: '', twitter: '', facebook: '', basicDesc: '',  detailDesc: '', hourlyRate: ''}  weet nie van logo nie
        this.state = { email: '', password: '', businessName: '', basicDesc: '', detailDesc: '', cellNo: ''}
 
        this.handleChange = this.handleChange.bind(this);
