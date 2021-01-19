@@ -11,8 +11,8 @@ class signup extends Component
     constructor(props)
     {
        super(props);
-        //{email: '', businessName: '', cellNo: '', website: '', instagram: '', twitter: '', facebook: '', basicDesc: '',  detailDesc: '', hourlyRate: ''}  weet nie van logo nie
-       this.state = { email: '', password: '', businessName: '', basicDesc: '', detailDesc: '', cellNo: ''}
+        //Vind uit oor logo 
+       this.state = {email: '', businessName: '', cellNo: '', website: '', instagram: '', twitter: '', facebook: '', basicDesc: '',  detailDesc: '', hourlyRate: ''};
 
        this.handleChange = this.handleChange.bind(this);
        this.RequestRegister = this.RequestRegister.bind(this);
@@ -41,6 +41,21 @@ class signup extends Component
             case 'detailDesc':
                 this.setState({ detailDesc: event.target.value })
                 break; 
+            case 'website':
+                this.setState({ website: event.target.value })
+                break;
+            case 'instagram':
+                this.setState({ instagram: event.target.value})
+                break;
+            case 'twitter':
+                this.setState({ twitter: event.target.value})
+                break;
+            case 'facebook': 
+                this.setState({ facebook: event.target.value})
+                break;
+            case 'hourlyRate':
+                this.setState({ hourlyRate: event.target.value})
+                break;
         }
     }
 
@@ -55,7 +70,11 @@ class signup extends Component
             companyname: this.state.businessName,
             cellNum: this.state.cellNo,
             basicdesc: this.state.basicDesc,
-            detaildesc: this.state.detailDesc
+            detaildesc: this.state.detailDesc,
+            instagram: this.state.instagram,
+            twitter: this.state.twitter,
+            facebook: this.state.facebook,
+            hourlyRate: this.state.hourlyRate
         }
 
         console.log(JSON.stringify(req));
@@ -96,6 +115,7 @@ class signup extends Component
                     <input onChange={this.handleChange} name="twitter" id="twittertxt"  className="whiteInput" placeholder="Twitter URL (www.example.com)" />
                     <input onChange={this.handleChange} name="facebook" id="facetxt"  className="whiteInput" placeholder="Facebook URL (www.facebook.com/example)" />
                     <input onChange={this.handleChange} name="basicDesc" id="basictxt"  className="whiteInput" placeholder="Basic Description" />
+                    <input onChange={this.handleChange} name="hourlyRate" id="hourlyrate"  className="whiteInput" placeholder="Hourly Rate" />
                     <textarea onChange={this.handleChange} rows="7" cols="50" name="detailDesc" id="detailtxt"  className="largeInput" placeholder="Detailed Description" />
                     <p>Choose company logo:</p>
                     <input type="file" className="fileup" name="file" />
