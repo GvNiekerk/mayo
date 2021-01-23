@@ -9,6 +9,7 @@
   font-family: 'Montserrat', sans-serif;
   width: 100%;
 }
+
 .footer{
   margin-top: 360%;
   background-color: rgb(85, 72, 85);
@@ -269,11 +270,12 @@
   background-color: #292ce7;
   border: none;
   color: white;
-  padding: 40% 50%;
+  padding: 10px;
   border-radius: 6px;
   box-shadow: 6px 6px #0a020c;
-  margin: 1%;
-  margin-right: 10%;
+  margin: 5px;
+  margin-right: 10px;
+  width: 180px;
 }
 .aboutbtn{
   background-color: #385fcb;
