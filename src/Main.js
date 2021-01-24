@@ -6,6 +6,7 @@ import recentview from './recentview';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import login from './login';
 import logo from './logo.png';
+import account from './account';
 
 
 class Main extends Component 
@@ -46,7 +47,7 @@ class Main extends Component
             <Switch>
             <Route path= "/about" component={about} />
             <Route path= "/login" component={login}/>
-            <Route path= "/recentview" component={recentview}/>
+            <Route path= "/recentview" component={account}/>
 
             <Route  path= "/" component={home}/>
             </Switch>  
