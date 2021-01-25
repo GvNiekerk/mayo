@@ -52,6 +52,7 @@ class Login extends Component {
             if (response.ok) {
                 const cookies = new Cookies();
                 cookies.set('token', response.headers.get('auth-token'), { path: "/login" })
+                window.location=("/home");
                 
                alert("Login successful")
             }
