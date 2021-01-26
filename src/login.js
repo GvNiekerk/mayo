@@ -50,7 +50,7 @@ class Login extends Component {
             debugger
             if (response.ok) {
                 cookies.set('token', response.headers.get('auth-token'))
-                alert("Login successful poes")
+                alert("Login successful")
                 window.location = ("/account");
 
             }
