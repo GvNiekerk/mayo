@@ -74,7 +74,8 @@ class signup extends Component
             instagram: this.state.instagram,
             twitter: this.state.twitter,
             facebook: this.state.facebook,
-            hourlyRate: this.state.hourlyRate
+            hourlyRate: this.state.hourlyRate,
+            website: this.state.website
         }
 
         console.log(JSON.stringify(req));
