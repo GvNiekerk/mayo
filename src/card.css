@@ -1,19 +1,16 @@
 .card{
-    
     height: 200px;
-    background: rgb(207, 205, 205);
+    background: white;
     color: #3e508b;
     border-radius: 10px;
-    box-shadow: 0px 1px 10px 1px black;
+    box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.329);
     overflow: hidden;
     width: 80%;
     align-items: center;
     max-width: 500px;
     margin-top: 15px;
     font-family: 'Montserrat', sans-serif;
-    
     transition: 0.6s;
-
 }
 .card:hover{
     background: whitesmoke;

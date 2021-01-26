@@ -9,15 +9,9 @@ import detaillist from "./detailedlisting";
 
 class card extends Component 
 {
-    getListing(){
-        var data = {"userEmail":"jan@janmail.com"};
-        axios.post("http://localhost:3000/getlisting/getlisting", data,{ 
-        })
-        .then(res => {
-          console.log(res.body);
-        })
+    constructor(props) {
+        super(props);
     }
-
 
     render()
     {
@@ -31,14 +25,13 @@ class card extends Component
                 </div>
             </div>
             <div >
-                <h3 className="busname">Waynes Plumbing</h3>
+                <h3 className="busname">{this.props.companyName}</h3>
                 <h4>profesional plumbing services</h4>
-                <p>Brits</p>
+                <p>Brits </p>
                 <button>View profile</button>
                 <h3 className="price">R400</h3>
                 <h3 className="rate">p/h</h3>
             </div>
-            {this.getListing()}
         </div>
         </Link>
         <Switch>
