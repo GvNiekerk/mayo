@@ -27,9 +27,9 @@ class card extends Component
             <div >
                 <h3 className="busname">{this.props.companyName}</h3>
                 <h4>profesional plumbing services</h4>
-                <p>Brits </p>
+                <p>{this.props.userEmail} </p>
                 <button>View profile</button>
-                <h3 className="price">R400</h3>
+                <h3 className="price">{this.props.hourlyRate}</h3>
                 <h3 className="rate">p/h</h3>
             </div>
         </div>

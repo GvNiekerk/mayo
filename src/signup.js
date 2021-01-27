@@ -1,7 +1,8 @@
 import { Component } from "react";
 import './App.css';
 import axios from 'axios';
-import Cookies from 'universal-cookie';
+import { cookies } from './Main';
+import account from './account';
 
 
 
@@ -89,9 +90,9 @@ class signup extends Component
             body: JSON.stringify(req),
         }).then((response) => {
             if (response.ok) {
-                const cookies = new Cookies();
-                cookies.set('token', response.headers.get('auth-token'), { path: "/register" })
+                cookies.set('token', response.headers.get('auth-token'))
                 alert("Success");
+                window.location = ("/account");
             }
             else{
                 alert("Invalid Login")
