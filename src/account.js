@@ -15,7 +15,11 @@ class account extends Component {
         work: "N/A",
         website: "N/A",
         mail: "N/A",
-        phone: "N/A"
+        phone: "N/A",
+        instaURL: "N/A",
+        twitterURL: "N/A",
+        facebookURL: "N/A"
+
       }
     }
 
@@ -33,6 +37,7 @@ class account extends Component {
       headers: headers
     }).then((response) => response.json())
     .then((responseJson) => {
+      console.log(responseJson);
       this.setState(responseJson);
     })
   }
@@ -65,6 +70,13 @@ class account extends Component {
               <li className="website"><a className="nostyle" href={this.state.contactInformation.website} >{this.state.contactInformation.website}</a></li>
               <li className="mail">{this.state.contactInformation.mail}</li>
               <li className="phone">{this.state.contactInformation.phone}</li>
+              <li className="basic_desc">{this.state.basicDesc}</li>
+              <li className="detailed_desc">{this.state.detailDesc}</li>
+              <li className="insta">{this.state.contactInformation.instaURL}</li>
+              <li className="facebook">{this.state.contactInformation.facebookURL}</li>
+              <li className="twitter">{this.state.contactInformation.twitterURL}</li>
+              <li className="rate">{this.state.hourlyRate}</li>
+
               {/* <li className="resume"><a href="#" className="nostyle"></a></li> */}
             </ul>
             <button className="button">edit profile</button>

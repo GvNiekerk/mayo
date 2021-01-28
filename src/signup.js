@@ -72,17 +72,19 @@ class signup extends Component
             cellNum: this.state.cellNo,
             basicdesc: this.state.basicDesc,
             detaildesc: this.state.detailDesc,
-            instagram: this.state.instagram,
-            twitter: this.state.twitter,
-            facebook: this.state.facebook,
+            instaURL: this.state.instagram,
+            twitURL: this.state.twitter,
+            facebookURL: this.state.facebook,
             hourlyRate: this.state.hourlyRate,
             website: this.state.website
         }
 
-        console.log(JSON.stringify(req));
 
         var headers = new Headers();
         headers.append('Content-Type', 'application/json')
+
+        console.log(JSON.stringify(req));
+
 
         fetch("http://localhost:3000/auth/register", {
             method: "post",
@@ -113,11 +115,11 @@ class signup extends Component
                     <input onChange={this.handleChange} name="businessName" id="bustxt"  className="whiteInput" placeholder="Company Name" />
                     <input onChange={this.handleChange} name="cellNo" id="celltxt"  className="whiteInput" placeholder="Contact Number" />
                     <input onChange={this.handleChange} name="website" id="webtxt"  className="whiteInput" placeholder="Company Website URL (www.example.com)" />
-                    <input onChange={this.handleChange} name="instagram" id="instatxt"  className="whiteInput" placeholder="Instagram URL (www.instagram.com/example)" />
-                    <input onChange={this.handleChange} name="twitter" id="twittertxt"  className="whiteInput" placeholder="Twitter URL (www.example.com)" />
-                    <input onChange={this.handleChange} name="facebook" id="facetxt"  className="whiteInput" placeholder="Facebook URL (www.facebook.com/example)" />
                     <input onChange={this.handleChange} name="basicDesc" id="basictxt"  className="whiteInput" placeholder="Basic Description" />
                     <input onChange={this.handleChange} name="hourlyRate" id="hourlyrate"  className="whiteInput" placeholder="Hourly Rate" />
+                    <input onChange={this.handleChange} name="instagram" id="instagram"  className="whiteInput" placeholder="Instagram URL (www.instagram.com/example)" />
+                    <input onChange={this.handleChange} name="twitter" id="twitter"  className="whiteInput" placeholder="Twitter URL (www.example.com)" />
+                    <input onChange={this.handleChange} name="facebook" id="facebook"  className="whiteInput" placeholder="Facebook URL (www.facebook.com/example)" />
                     <textarea onChange={this.handleChange} rows="7" cols="50" name="detailDesc" id="detailtxt"  className="largeInput" placeholder="Detailed Description" />
                     <p>Choose company logo:</p>
                     <input type="file" className="fileup" name="file" />
