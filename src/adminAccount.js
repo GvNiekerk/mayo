@@ -13,6 +13,7 @@ function getBase64(file) {
 
   var image64 = '';
   var imageName = "";
+  var userActionEmail = "";
 
 class adminAccount extends Component 
 {
@@ -68,6 +69,17 @@ class adminAccount extends Component
         }
     }
 
+    ActivateAccount(event){
+        userActionEmail = document.getElementById("userActionEmail").value;
+        window.alert("Activate user : "+userActionEmail);
+    }
+
+    DeactivateAccount(event){
+        userActionEmail = document.getElementById("userActionEmail").value;
+        window.alert("De-Activate user : "+userActionEmail);
+    }
+
+    
     //Changed name to correct naming syntax
     RequestRegister(event){
         event.preventDefault();
@@ -127,7 +139,18 @@ class adminAccount extends Component
             <div className="App-header" >
               
                 <div className="RegisterBox">
-                    <h1>Register</h1>
+                    <h1>Admin</h1>
+
+                   
+                        <h3> Activate / Deactivate user</h3>
+                        <h3>Enter user email:</h3>
+                        <input onChange={this.handleChange} name="userActionEmail" id="userActionEmail" className="whiteInput" placeholder="user Email" />
+                        <button onClick={this.ActivateAccount} className="blueBtn" type="submit">Activate</button>
+                        <button onClick={this.DeactivateAccount} className="blueBtn" type="submit">Deactivate</button>
+                        <br/>
+
+                    
+                    <h3>Add a new user</h3>
                     <input onChange={this.handleChange} name="email" id="emailtxt" className="whiteInput" placeholder="email" />
                     <input onChange={this.handleChange} name="businessName" id="bustxt"  className="whiteInput" placeholder="Company Name" />
                     <input onChange={this.handleChange} name="cellNo" id="celltxt"  className="whiteInput" placeholder="Contact Number" />
