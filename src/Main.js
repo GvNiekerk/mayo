@@ -8,7 +8,8 @@ import login from './login';
 import logo from './logo.png';
 import account from './account';
 import Cookies from "universal-cookie";
-
+import adminLogin from './adminLogin';
+import adminAccount from './adminAccount';
 const cookies = new Cookies();
 
 class Main extends Component {
@@ -37,6 +38,9 @@ class Main extends Component {
                     <Link to="/recentview">
                         <button className="button-viewed">Recently viewed</button>
                     </Link>
+                    <Link to="/adminLogin">
+                        <button className="button-viewed">Admin Login</button>
+                    </Link>
 
                     <div>
 
@@ -46,10 +50,11 @@ class Main extends Component {
                     <Switch>
                         <Route path="/about" component={about} />
                         <Route path="/login" component={login} />
-                        <Route path="/recentview" component={account} />
+                        <Route path="/adminLogin" component={adminLogin} />
+                        <Route path="/recentview" component={recentview} />
                         <Route path="/account" component={account} />
-
-                        <Route path="/" component={home} />
+                        <Route path="/adminAccount" component={adminAccount} />
+                        <Route exact path="/" component={home} />
                     </Switch>
                 </Router>
 

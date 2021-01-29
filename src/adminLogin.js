@@ -2,7 +2,7 @@ import './App.css';
 import { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { cookies } from './Main';
-//add admin page en import
+import adminAccount from './adminAccount';
 
 class adminLogin extends Component {
     constructor(props) {
@@ -49,7 +49,7 @@ class adminLogin extends Component {
             if (response.ok) {
                 cookies.set('token', response.headers.get('auth-token'))
                 alert("Login successful")
-                //window.location = ("/account"); reload by admin page
+                window.location = ("/adminAccount"); 
                 
             }
             else {
@@ -72,7 +72,7 @@ class adminLogin extends Component {
                 <Router>
 
                     <Switch>
-                        <Route path="/admin" component={account} />
+                        <Route path="/adminAccount" component={adminAccount} />
                     </Switch>
                 </Router>
             </div>
