@@ -72,6 +72,7 @@ class adminAccount extends Component
     ActivateAccount(event){
         userActionEmail = document.getElementById("userActionEmail").value;
         window.alert("Activate user : "+userActionEmail);
+        
     }
 
     DeactivateAccount(event){

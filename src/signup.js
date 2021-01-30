@@ -15,6 +15,7 @@ function getBase64(file) {
 
   var image64 = '';
   var imageName = "";
+  var active = false;
 
 class signup extends Component 
 {
@@ -88,7 +89,8 @@ class signup extends Component
             hourlyRate: this.state.hourlyRate,
             website: this.state.website,
             image64: this.image64,
-            imageName: this.imageName
+            imageName: this.imageName,
+            active: active
         }
 
         console.log(JSON.stringify(req));

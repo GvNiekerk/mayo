@@ -11,6 +11,7 @@ class account extends Component {
       monthlyClicks: 0,
       name: "N/A",
       location: "N/A",
+      active: "N/A",
       contactInformation: {
         work: "N/A",
         website: "N/A",
@@ -76,6 +77,8 @@ class account extends Component {
               <li className="facebook">{this.state.contactInformation.facebookURL}</li>
               <li className="twitter">{this.state.contactInformation.twitterURL}</li>
               <li className="rate">{this.state.hourlyRate}</li>
+              <li className="rate">{this.state.active}</li>
+
 
               {/* <li className="resume"><a href="#" className="nostyle"></a></li> */}
             </ul>
