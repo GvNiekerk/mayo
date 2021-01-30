@@ -61,6 +61,15 @@ class account extends Component {
             <div className="following">
               <div className="follow_count">{this.state.monthlyClicks}</div>
           monthly clicks
+          <br/>
+          <br/>
+          <div className="follow_count">{this.state.active.toString()}</div>
+          Active Account:
+          <br/>
+          <br/>
+          <div className="follow_count">{this.state.hourlyRate}</div>
+          Your Rate:
+
         </div>
           </div>
           <div className="right_col">
@@ -77,7 +86,6 @@ class account extends Component {
               <li className="facebook">{this.state.contactInformation.facebookURL}</li>
               <li className="twitter">{this.state.contactInformation.twitterURL}</li>
               <li className="rate">{this.state.hourlyRate}</li>
-              <li className="rate">{this.state.active}</li>
 
 
               {/* <li className="resume"><a href="#" className="nostyle"></a></li> */}

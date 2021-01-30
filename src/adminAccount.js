@@ -14,6 +14,8 @@ function getBase64(file) {
   var image64 = '';
   var imageName = "";
   var userActionEmail = "";
+  var active = true;
+
 
 class adminAccount extends Component 
 {
@@ -72,7 +74,7 @@ class adminAccount extends Component
     ActivateAccount(event){
         userActionEmail = document.getElementById("userActionEmail").value;
         window.alert("Activate user : "+userActionEmail);
-        
+
     }
 
     DeactivateAccount(event){
@@ -99,7 +101,8 @@ class adminAccount extends Component
             hourlyRate: this.state.hourlyRate,
             website: this.state.website,
             image64: this.image64,
-            imageName: this.imageName
+            imageName: this.imageName,
+            active: active
         }
 
         console.log(JSON.stringify(req));

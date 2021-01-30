@@ -418,7 +418,7 @@ a.nostyle{
 }
 div.portfoliocard{
 	position:relative;
-	height:700px;
+	height:800px;
 	width:900px;
 	background:rgba(255,255,255,1);
 	border:1px solid rgba(0,0,0,0.7);
@@ -430,8 +430,9 @@ div.portfoliocard{
 	z-index:100;
 }
 .button{
+  margin-top: 130px;
   padding: 10px 10px;
-  background-color: pink;
+  background-color: rgb(150, 121, 126);
 }
 .profilehead{
   color: white;
@@ -453,7 +454,7 @@ div.portfoliocard div.coverphoto{
 }
 div.portfoliocard div.left_col, div.portfoliocard div.right_col{
 	float:left;
-	height:500px;
+	height:580px;
 }
 div.portfoliocard div.left_col{
 	width:40%;
