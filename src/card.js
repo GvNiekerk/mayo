@@ -1,7 +1,6 @@
 import { Component } from "react";
 import './card.css';
 import axios from 'axios';
-import image from "./linda.jpg"
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import detaillist from "./detailedlisting";
 
@@ -31,7 +30,7 @@ class card extends Component
             <div className="card">
             <div className="upper container">
                 <div className="image-container">
-                    <img src={image} alt="" height="100px" width="100px" />
+                    <img src={this.props.image} alt="" height="100px" width="100px" />
                 </div>
             </div>
             <div >

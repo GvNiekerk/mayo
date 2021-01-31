@@ -25,7 +25,7 @@ class home extends Component {
                 console.log(`retrieved shit:`)
                 console.log(responseJson)
                 responseJson.forEach(card => {
-                    cards.push(<Card companyName={card.companyname} hourlyRate={card.hourlyRate} userEmail={card.userEmail} />)
+                    cards.push(<Card image={card.image64} companyName={card.companyname} hourlyRate={card.hourlyRate} userEmail={card.userEmail} />)
                 });
                 this.setState({cards: cards})
             })

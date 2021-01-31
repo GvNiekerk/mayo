@@ -4,33 +4,32 @@ import axios from 'axios';
 import { cookies } from './Main';
 import account from './account';
 
-function getBase64(file) {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result);
-      reader.onerror = error => reject(error);
-    });
-  }
+class signup extends Component {
 
-  var image64 = '';
-  var imageName = "";
-  var active = false;
-
-class signup extends Component 
-{
-
-    constructor(props)
-    {
-       super(props);
+    constructor(props) {
+        super(props);
         //Vind uit oor logo 
-       this.state = {email: '', businessName: '', cellNo: '', website: '', instagram: '', twitter: '', facebook: '', basicDesc: '',  detailDesc: '', hourlyRate: ''};
+        this.state = {
+            email: '',
+            businessName: '',
+            cellNo: '',
+            website: '',
+            instagram: '',
+            twitter: '',
+            facebook: '',
+            basicDesc: '',
+            detailDesc: '',
+            hourlyRate: '',
+            image64: '',
+            imageName: '',
+            active: false
+        };
 
-       this.handleChange = this.handleChange.bind(this);
-       this.RequestRegister = this.RequestRegister.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.RequestRegister = this.RequestRegister.bind(this);
     }
 
-    handleChange(event){
+    handleChange(event) {
         switch (event.target.name) {
             case 'email':
                 this.setState({ email: event.target.value })
@@ -43,36 +42,36 @@ class signup extends Component
                 break;
             case 'businessName':
                 this.setState({ businessName: event.target.value })
-                break;  
+                break;
             case 'cellNo':
                 this.setState({ cellNo: event.target.value })
-                break; 
+                break;
             case 'basicDesc':
                 this.setState({ basicDesc: event.target.value })
-                break; 
+                break;
             case 'detailDesc':
                 this.setState({ detailDesc: event.target.value })
-                break; 
+                break;
             case 'website':
                 this.setState({ website: event.target.value })
                 break;
             case 'instagram':
-                this.setState({ instagram: event.target.value})
+                this.setState({ instagram: event.target.value })
                 break;
             case 'twitter':
-                this.setState({ twitter: event.target.value})
+                this.setState({ twitter: event.target.value })
                 break;
-            case 'facebook': 
-                this.setState({ facebook: event.target.value})
+            case 'facebook':
+                this.setState({ facebook: event.target.value })
                 break;
             case 'hourlyRate':
-                this.setState({ hourlyRate: event.target.value})
+                this.setState({ hourlyRate: event.target.value })
                 break;
         }
     }
 
     //Changed name to correct naming syntax
-    RequestRegister(event){
+    RequestRegister(event) {
         event.preventDefault();
 
         var req = {
@@ -88,10 +87,11 @@ class signup extends Component
             facebook: this.state.facebook,
             hourlyRate: this.state.hourlyRate,
             website: this.state.website,
-            image64: this.image64,
-            imageName: this.imageName,
-            active: active
+            image64: this.state.image64,
+            imageName: this.state.imageName,
+            active: this.state.active
         }
+        debugger
 
         console.log(JSON.stringify(req));
 
@@ -108,55 +108,65 @@ class signup extends Component
                 alert("Success");
                 window.location = ("/account");
             }
-            else{
+            else {
                 alert("Invalid Login")
             }
         })
     }
-    
-    handleUpload(event) {
+
+    handleUpload = (event) => {
         event.preventDefault();
 
         let file = event.target.files[0]
-        getBase64(file).then((base) => {
-            image64 =  base.split(',')[1] 
-            imageName = file.name
-            console.log(image64, imageName)
+        this.getBase64(file).then((base) => {
+            this.handleBase64(file, base);
         });
     }
-    
-    render()
-    {
+
+    handleBase64 = (file, base) => {
+        this.state.image64 = base
+        this.state.imageName = file.name
+        document.getElementById('test-image').setAttribute('src', base);
+    }
+
+    getBase64 = (file) => {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = error => reject(error);
+        });
+    }
+
+    render() {
         return (
             <div className="App-header" >
-              
+
                 <div className="RegisterBox">
                     <h1>Register</h1>
                     <input onChange={this.handleChange} name="email" id="emailtxt" className="whiteInput" placeholder="email" />
-                    <input onChange={this.handleChange} name="businessName" id="bustxt"  className="whiteInput" placeholder="Company Name" />
-                    <input onChange={this.handleChange} name="cellNo" id="celltxt"  className="whiteInput" placeholder="Contact Number" />
-                    <input onChange={this.handleChange} name="website" id="webtxt"  className="whiteInput" placeholder="Company Website URL (www.example.com)" />
-                    <input onChange={this.handleChange} name="instagram" id="instatxt"  className="whiteInput" placeholder="Instagram URL (www.instagram.com/example)" />
-                    <input onChange={this.handleChange} name="twitter" id="twittertxt"  className="whiteInput" placeholder="Twitter URL (www.example.com)" />
-                    <input onChange={this.handleChange} name="facebook" id="facetxt"  className="whiteInput" placeholder="Facebook URL (www.facebook.com/example)" />
-                    <input onChange={this.handleChange} name="basicDesc" id="basictxt"  className="whiteInput" placeholder="Basic Description" />
-                    <input onChange={this.handleChange} name="hourlyRate" id="hourlyrate"  className="whiteInput" placeholder="Hourly Rate" />
-                    <textarea onChange={this.handleChange} rows="7" cols="50" name="detailDesc" id="detailtxt"  className="largeInput" placeholder="Detailed Description" />
+                    <input onChange={this.handleChange} name="businessName" id="bustxt" className="whiteInput" placeholder="Company Name" />
+                    <input onChange={this.handleChange} name="cellNo" id="celltxt" className="whiteInput" placeholder="Contact Number" />
+                    <input onChange={this.handleChange} name="website" id="webtxt" className="whiteInput" placeholder="Company Website URL (www.example.com)" />
+                    <input onChange={this.handleChange} name="instagram" id="instatxt" className="whiteInput" placeholder="Instagram URL (www.instagram.com/example)" />
+                    <input onChange={this.handleChange} name="twitter" id="twittertxt" className="whiteInput" placeholder="Twitter URL (www.example.com)" />
+                    <input onChange={this.handleChange} name="facebook" id="facetxt" className="whiteInput" placeholder="Facebook URL (www.facebook.com/example)" />
+                    <input onChange={this.handleChange} name="basicDesc" id="basictxt" className="whiteInput" placeholder="Basic Description" />
+                    <input onChange={this.handleChange} name="hourlyRate" id="hourlyrate" className="whiteInput" placeholder="Hourly Rate" />
+                    <textarea onChange={this.handleChange} rows="7" cols="50" name="detailDesc" id="detailtxt" className="largeInput" placeholder="Detailed Description" />
                     <p>Choose company logo:</p>
                     <input onChange={this.handleUpload} type="file" className="fileup" name="file" />
+                    <img id="test-image" style={{width: 200, height: 200 }} />
                     <p className="debittxt">Press the button below to download the debit order documents required to complete registration</p>
                     <button onClick={this.RequestRegister} className="blueBtn" type="submit">Download Documents</button>
                     <h4>email documents to: www.mayo.com</h4>
-                    <input onChange={this.handleChange} name="password" id="passtxt"  className="whiteInput" placeholder="Password" type="password" />
-                    <input onChange={this.handleChange} name="password2" id="pass2txt"  className="whiteInput" placeholder="Confirm Password" type="password" />
+                    <input onChange={this.handleChange} name="password" id="passtxt" className="whiteInput" placeholder="Password" type="password" />
+                    <input onChange={this.handleChange} name="password2" id="pass2txt" className="whiteInput" placeholder="Confirm Password" type="password" />
                     <button onClick={this.RequestRegister} className="blueBtn" type="submit">Register</button>
-                 </div>
-
-
-
-                 
+                </div>
             </div>
         );
     }
 }
- export default signup;
+
+export default signup;

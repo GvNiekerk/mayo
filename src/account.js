@@ -12,6 +12,7 @@ class account extends Component {
       name: "N/A",
       location: "N/A",
       active: "N/A",
+      profileImage: '',
       contactInformation: {
         work: "N/A",
         website: "N/A",
@@ -57,7 +58,7 @@ class account extends Component {
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
         <div className="portfoliocard">
           <div className="coverphoto" />
-          <div className="profile_picture" />
+          <img src={this.state.profileImage} className="profile_picture" />
           <div className="left_col">
             <div className="followers">
               <div className="follow_count">{this.state.totalClicks}</div>
