@@ -42,15 +42,15 @@ class detailedlisting extends Component
 
 
 
-    RequestClose(event){
-        this.setState({
-            showMe:false
-        })
+    closeListing(event) {
+        window.location = ("/");
+        
+        
     }
 
     render()
     {
-
+        
         return (
         <div>
             {this.state.showMe?
@@ -64,7 +64,7 @@ class detailedlisting extends Component
                     <br></br>Toilet Fix  -    R200
                 </dl>
                 
-                <button onClick={() => this.RequestClose()} className="backknoppie">X</button>
+                <button onClick={() => this.closeListing()} className="backknoppie">X</button>
                 <img onClick={() => this.facebookClick()} className="fb" src={face}/>
                 <img onClick={() => this.instaClick()} className="fb" src={insta}/>
                 <img onClick={() => this.twitClick()} className="fb" src={twit}/>

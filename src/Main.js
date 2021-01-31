@@ -10,6 +10,7 @@ import account from './account';
 import Cookies from "universal-cookie";
 import adminLogin from './adminLogin';
 import adminAccount from './adminAccount';
+import detailedlisting from "./detailedlisting";
 const cookies = new Cookies();
 
 class Main extends Component {
@@ -54,6 +55,7 @@ class Main extends Component {
                         <Route path="/recentview" component={recentview} />
                         <Route path="/account" component={account} />
                         <Route path="/adminAccount" component={adminAccount} />
+                        <Route path="/listing" component={detailedlisting}/>
                         <Route exact path="/" component={home} />
                     </Switch>
                 </Router>

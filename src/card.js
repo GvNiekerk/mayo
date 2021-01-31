@@ -10,14 +10,31 @@ import detaillist from "./detailedlisting";
 class card extends Component 
 {
     constructor(props) {
+        
         super(props);
     }
+
+    openListing(event) {
+        window.location = ("/listing");
+        
+        
+    }
+             
+   
+
+
+
+
+
 
     render()
     {
         return (
+            
             <Router>
-            <Link to = "/listing">
+            
+
+            
             <div className="card">
             <div className="upper container">
                 <div className="image-container">
@@ -28,17 +45,20 @@ class card extends Component
                 <h3 className="busname">{this.props.companyName}</h3>
                 <h4>profesional plumbing services</h4>
                 <p>{this.props.userEmail} </p>
-                <button>View profile</button>
+                <button onClick={this.openListing} className="greenBtn" type="submit">View Service</button>
                 <h3 className="price">{this.props.hourlyRate}</h3>
                 <h3 className="rate">p/h</h3>
             </div>
         </div>
-        </Link>
+
+        
         <Switch>
             <Route path= "/listing" component={detaillist} />
         </Switch>  
 
         </Router>
+
+        
         );
     }
 }
