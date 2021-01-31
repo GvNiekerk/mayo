@@ -20,13 +20,6 @@ class card extends Component
         
     }
              
-   
-
-
-
-
-
-
     render()
     {
         return (

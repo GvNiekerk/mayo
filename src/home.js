@@ -55,7 +55,7 @@ class home extends Component {
                     <div>
                         {this.state.cards}
                     </div>
-                    <button onClick={() => { this.changePage(false)}}>Pervious</button>
+                    <button onClick={() => { this.changePage(false)}}>Previous</button>
                     <button onClick={() => { this.changePage(true)}}>Next</button>
                 </div>
 
