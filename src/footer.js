@@ -29,7 +29,7 @@ class footer extends Component
                  </div>
                  <div>
                  <h2 className="foot">Contact us</h2>
-                 <h2 className="footpar">Hippo Comparative Services (Pty) Ltd is an authorised financial service provider. FSP number: 16357. Block A, Steyn City Capital Park, Erling Road, Riverglen, Dainfern, 2191.</h2>
+                 <h2 className="footpar">Dewald moet nog die footer vir ons stuur</h2>
 
                  <img onClick={() => this.facebookClick()} className="fbfoot" src={face}/>
                 <img onClick={() => this.instaClick()} className="fbfoot" src={insta}/>
