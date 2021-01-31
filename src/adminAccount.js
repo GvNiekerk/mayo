@@ -72,17 +72,49 @@ class adminAccount extends Component
     }
 
     ActivateAccount(event){
-        userActionEmail = document.getElementById("userActionEmail").value;
-        window.alert("Activate user : "+userActionEmail);
+        event.preventDefault();
 
-        //Call Post
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json')
+
+
+
+        userActionEmail = document.getElementById("userActionEmail").value;
+        var req = {
+            userEmail: userActionEmail
+        }
+        fetch("http://localhost:3000/active/activate", {
+            method: "post",
+            headers: headers,
+            body: JSON.stringify(req),
+        }).then((response)=>{
+            console.log(response.body);
+            if (response.ok){alert("User activated successfully");}
+            else{alert("Error activating user") }
+        })
     }
 
     DeactivateAccount(event){
-        userActionEmail = document.getElementById("userActionEmail").value;
-        window.alert("De-Activate user : "+userActionEmail);
+        event.preventDefault();
 
-        //Call Post
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json')
+
+
+
+        userActionEmail = document.getElementById("userActionEmail").value;
+        var req = {
+            userEmail: userActionEmail
+        }
+        fetch("http://localhost:3000/active/deactivate", {
+            method: "post",
+            headers: headers,
+            body: JSON.stringify(req),
+        }).then((response)=>{
+            console.log(response.body);
+            if (response.ok){alert("User Deactivated successfully");}
+            else{alert("Error deactivating user") }
+        })
     }
 
     
