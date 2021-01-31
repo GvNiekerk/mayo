@@ -43,6 +43,11 @@ class account extends Component {
     })
   }
 
+
+  OpenEdit(event){
+    window.location = ("/editprofile");
+  }
+
   render() {
     return (
       <div>
@@ -90,7 +95,7 @@ class account extends Component {
 
               {/* <li className="resume"><a href="#" className="nostyle"></a></li> */}
             </ul>
-            <button className="button">edit profile</button>
+            <button onClick={this.OpenEdit} className="button">Edit profile</button>
             <button className="button">terminate service</button>
 
           </div>
