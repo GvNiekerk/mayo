@@ -23,6 +23,7 @@ class signup extends Component {
             image64: '',
             imageName: '',
             adress:'',
+            service:'',
             active: false
         };
 
@@ -71,6 +72,9 @@ class signup extends Component {
             case 'adress':
                 this.setState({ adress: event.target.value })
                 break;
+            case 'service':
+                 this.setState({ service: event.target.value })
+                break;    
         }
     }
 
@@ -94,6 +98,7 @@ class signup extends Component {
             image64: this.state.image64,
             imageName: this.state.imageName,
             adress: this.state.adress,
+            service: this.state.service,
             active: this.state.active
         }
         debugger
@@ -151,6 +156,12 @@ class signup extends Component {
                     <h1>Register</h1>
                     <input onChange={this.handleChange} name="email" id="emailtxt" className="whiteInput" placeholder="email" />
                     <input onChange={this.handleChange} name="businessName" id="bustxt" className="whiteInput" placeholder="Company Name" />
+                    <select name="service" value={this.state.value} onChange={this.handleChange}>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Electrical">Electrical</option>
+                        <option value="Gardening">Gardening</option>
+                        <option value="Construction">Construction</option>
+                    </select>
                     <input onChange={this.handleChange} name="cellNo" id="celltxt" className="whiteInput" placeholder="Contact Number" />
                     <input onChange={this.handleChange} name="website" id="webtxt" className="whiteInput" placeholder="Company Website URL (www.example.com)" />
                     <input onChange={this.handleChange} name="instagram" id="instatxt" className="whiteInput" placeholder="Instagram URL (www.instagram.com/example)" />

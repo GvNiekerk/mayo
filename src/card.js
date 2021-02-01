@@ -35,7 +35,7 @@ class card extends Component
             </div>
             <div >
                 <h3 className="busname">{this.props.companyName}</h3>
-                <h4>profesional plumbing services</h4>
+                <h4 className="service">{this.props.service}</h4>
                 <p>{this.props.userEmail} </p>
                 <button onClick={this.openListing} className="greenBtn" type="submit">View Service</button>
                 <h3 className="price">{this.props.hourlyRate}</h3>

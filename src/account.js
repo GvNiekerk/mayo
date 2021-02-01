@@ -13,6 +13,7 @@ class account extends Component {
       location: "N/A",
       active: "N/A",
       profileImage: '',
+      service:'',
       contactInformation: {
         work: "N/A",
         website: "N/A",
@@ -82,7 +83,7 @@ class account extends Component {
             <h2 className="name">{this.state.name}</h2>
             <h3 className="location">{this.state.location}</h3>
             <ul className="contact_information">
-              <li className="work">{this.state.contactInformation.work}</li>
+              <li className="service">{this.state.service}</li>
               <li className="website"><a className="nostyle" href={this.state.contactInformation.website} >{this.state.contactInformation.website}</a></li>
               <li className="mail">{this.state.contactInformation.mail}</li>
               <li className="phone">{this.state.contactInformation.phone}</li>
