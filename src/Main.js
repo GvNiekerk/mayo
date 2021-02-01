@@ -12,6 +12,7 @@ import adminLogin from './adminLogin';
 import adminAccount from './adminAccount';
 import detailedlisting from "./detailedlisting";
 import editProfile from "./editProfile";
+import terms from "./terms";
 const cookies = new Cookies();
 
 class Main extends Component {
@@ -58,6 +59,7 @@ class Main extends Component {
                         <Route path="/adminAccount" component={adminAccount} />
                         <Route path="/listing" component={detailedlisting}/>
                         <Route path="/editprofile" component={editProfile}/>
+                        <Route path="/terms" component={terms} />
                         <Route exact path="/" component={home} />
                     
                     </Switch>

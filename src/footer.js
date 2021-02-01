@@ -19,6 +19,12 @@ class footer extends Component
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       }
 
+      termsConditions() {
+        window.location = ("/terms");
+
+      }
+
+
     render()
     {
         return (
@@ -29,14 +35,16 @@ class footer extends Component
                  </div>
                  <div>
                  <h2 className="foot">Contact us</h2>
-                 <h2 className="footpar">Dewald moet nog die footer vir ons stuur</h2>
 
                  <img onClick={() => this.facebookClick()} className="fbfoot" src={face}/>
                 <img onClick={() => this.instaClick()} className="fbfoot" src={insta}/>
                 <img onClick={() => this.twitClick()} className="fbfoot" src={twit}/>
                 <img onClick={() => this.mailClick()} className="fbfoot" src={email}/>
                 <br/>
+                <h3>A Product of MayoCompare(pty)</h3>
                 <br/>
+
+                <button className="search-btn" onClick={() => this.termsConditions()} type="button">Terms and conditions</button>
                 <button className="search-btn" onClick={() => this.topFunction()} type="button">Back to top</button>
 
 
