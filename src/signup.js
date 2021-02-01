@@ -22,6 +22,7 @@ class signup extends Component {
             hourlyRate: '',
             image64: '',
             imageName: '',
+            adress:'',
             active: false
         };
 
@@ -67,6 +68,9 @@ class signup extends Component {
             case 'hourlyRate':
                 this.setState({ hourlyRate: event.target.value })
                 break;
+            case 'adress':
+                this.setState({ adress: event.target.value })
+                break;
         }
     }
 
@@ -89,6 +93,7 @@ class signup extends Component {
             website: this.state.website,
             image64: this.state.image64,
             imageName: this.state.imageName,
+            adress: this.state.adress,
             active: this.state.active
         }
         debugger
@@ -151,6 +156,7 @@ class signup extends Component {
                     <input onChange={this.handleChange} name="instagram" id="instatxt" className="whiteInput" placeholder="Instagram URL (www.instagram.com/example)" />
                     <input onChange={this.handleChange} name="twitter" id="twittertxt" className="whiteInput" placeholder="Twitter URL (www.example.com)" />
                     <input onChange={this.handleChange} name="facebook" id="facetxt" className="whiteInput" placeholder="Facebook URL (www.facebook.com/example)" />
+                    <input onChange={this.handleChange} name="adress" id="adresstxt" className="whiteInput" placeholder="The adress of your business/service" />
                     <input onChange={this.handleChange} name="basicDesc" id="basictxt" className="whiteInput" placeholder="Basic Description" />
                     <input onChange={this.handleChange} name="hourlyRate" id="hourlyrate" className="whiteInput" placeholder="Hourly Rate" />
                     <textarea onChange={this.handleChange} rows="7" cols="50" name="detailDesc" id="detailtxt" className="largeInput" placeholder="Detailed Description" />
