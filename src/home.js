@@ -25,7 +25,7 @@ class home extends Component {
                 console.log(`retrieved shit:`)
                 console.log(responseJson)
                 responseJson.forEach(card => {
-                    cards.push(<Card image={card.image64} companyName={card.companyname} hourlyRate={card.hourlyRate} userEmail={card.userEmail} service={card.service} />)
+                    cards.push(<Card image={card.image64} companyName={card.companyname} city={card.city} suburb={card.suburb} adres={card.adres} hourlyRate={card.hourlyRate} userEmail={card.userEmail} service={card.service} />)
                 });
                 this.setState({cards: cards})
             })
@@ -36,6 +36,31 @@ class home extends Component {
         this.setState({startIndex: newNumber});
 
         this.getCards();
+    }
+
+    searchListing = () => {
+        console.log('calling to get search shit')
+        var cards = [];
+        var req = {
+            service: this.state.service,
+            city: this.state.city,
+            suburb: this.state.suburb,
+            adress: this.state.adress
+        }
+
+        console.log(JSON.stringify(req));
+        fetch(`http://localhost:3000/service/search?start=${this.state.startIndex}`, {
+            method: "POST",
+            body: JSON.stringify(req),
+        }).then((response) => response.json())
+            .then((responseJson) => {
+                console.log(`retrieved shit:`)
+                console.log(responseJson)
+                responseJson.forEach(card => {
+                    cards.push(<Card image={card.image64} companyName={card.companyname} city={card.city} suburb={card.suburb} adres={card.adres} hourlyRate={card.hourlyRate} userEmail={card.userEmail} service={card.service} />)
+                });
+                this.setState({cards: cards})
+            })
     }
 
     render() {
