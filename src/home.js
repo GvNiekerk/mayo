@@ -9,9 +9,21 @@ class home extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { startIndex: 0, cards: [] };
-
+        this.state = { startIndex: 0, cards: [],searchLocation : '',
+        searchService: '' };
+        this.handleChange = this.handleChange.bind(this);
+        this.RequestSearch = this.RequestSearch.bind(this);
         this.getCards();
+    }
+    handleChange(event) {
+        switch (event.target.name) {
+            case 'searchService':
+                this.setState({ searchService: event.target.value })
+                 break; 
+            case 'searchLocation':
+                this.setState({ searchLocation: event.target.value })
+                break;
+        }
     }
 
     getCards = () => {
@@ -38,14 +50,14 @@ class home extends Component {
         this.getCards();
     }
 
-    searchListing = () => {
+    RequestSearch = () => {
         console.log('calling to get search shit')
         var cards = [];
         var req = {
-            service: this.state.service,
-            city: this.state.city,
-            suburb: this.state.suburb,
-            adress: this.state.adress
+            service: this.state.searchService,
+            city: this.state.searchLocation,
+            suburb: this.state.searchLocation,
+            adress: this.state.searchLocation
         }
 
         console.log(JSON.stringify(req));
@@ -62,6 +74,7 @@ class home extends Component {
                 this.setState({cards: cards})
             })
     }
+    
 
     render() {
 
@@ -74,9 +87,14 @@ class home extends Component {
                 </div>
 
                 <div className="App">
-                    <input type="text" className="search-field" placeholder="Business, Services.." />
-                    <input type="text" className="search-field" placeholder="Location" />
-                    <button className="search-btn" type="button">Search</button>
+                    <select name="searchService" value={this.state.value} onChange={this.handleChange}>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Electrical">Electrical</option>
+                        <option value="Gardening">Gardening</option>
+                        <option value="Construction">Construction</option>
+                    </select>
+                    <input type="text" className="searchLocation" placeholder="Location" />
+                    <button onClick={this.RequestSearch} className="search-btn" type="button">Search</button>
                     <div>
                         {this.state.cards}
                     </div>
