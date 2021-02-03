@@ -11,6 +11,8 @@ class account extends Component {
       monthlyClicks: 0,
       name: "N/A",
       location: "N/A",
+      suburb: 'N/A',
+      city: 'N/A',
       active: "N/A",
       profileImage: '',
       service:'',
@@ -82,6 +84,7 @@ class account extends Component {
           <div className="right_col">
             <h2 className="name">{this.state.name}</h2>
             <h3 className="location">{this.state.location}</h3>
+            <h3 className="location">{this.state.city}, {this.state.suburb}</h3>
             <ul className="contact_information">
               <li className="service">{this.state.service}</li>
               <li className="website"><a className="nostyle" href={this.state.contactInformation.website} >{this.state.contactInformation.website}</a></li>

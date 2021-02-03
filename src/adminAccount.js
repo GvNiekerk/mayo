@@ -24,7 +24,20 @@ class adminAccount extends Component
     {
        super(props);
         //Vind uit oor logo 
-       this.state = {email: '', businessName: '', cellNo: '', website: '', instagram: '', twitter: '', facebook: '', basicDesc: '',  detailDesc: '', hourlyRate: ''};
+       this.state = {
+           email: '', 
+           businessName: '', 
+           cellNo: '', 
+           website: '', 
+           instagram: '', 
+           twitter: '', 
+           facebook: '', 
+           basicDesc: '',  
+           detailDesc: '', 
+           hourlyRate: '',
+           password: '',
+           password2: ''
+        };
 
        this.handleChange = this.handleChange.bind(this);
        this.RequestRegister = this.RequestRegister.bind(this);

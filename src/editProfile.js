@@ -1,6 +1,8 @@
 import {cookies} from './Main';
 import { Component } from "react";
+import account from './account'; 
 
+var currentEmail = "";
 class ConfirmChanges extends Component {
 
   constructor(props) {
@@ -10,17 +12,19 @@ class ConfirmChanges extends Component {
      
       name: "N/A",
       location: "N/A",
-        basicdesc: "N/A",
-        detaildesc: "N/A",
-        work: "N/A",
-        website: "N/A",
-        mail: "N/A",
-        phone: "N/A",
-        instaURL: "N/A",
-        twitterURL: "N/A",
-        facebookURL: "N/A",
-        service: "",
-        hourlyRate: ""
+      suburb: "N/A",
+      city: "N/A",
+      basicdesc: "N/A",
+      detaildesc: "N/A",
+      work: "N/A",
+      website: "N/A",
+      mail: "N/A",
+      phone: "N/A",
+      instaURL: "N/A",
+      twitterURL: "N/A",
+      facebookURL: "N/A",
+      service: "",
+      hourlyRate: ""
       
     }
     this.handleChange = this.handleChange.bind(this);
@@ -68,27 +72,35 @@ class ConfirmChanges extends Component {
         case 'twitter':
             this.setState({ twitter: event.target.value})
             break;
+        case 'suburb':
+              this.setState({ suburb: event.target.value})
+              break;
+        case 'city':
+              this.setState({ city: event.target.value})
+              break;  
     }
 }
 
   
 
 
-  getData = () => {
+getData = () => {
 
-    var headers = new Headers();
-    headers.append('Content-Type', 'application/json')
-    headers.append('auth-token', cookies.get('token'))
+  var headers = new Headers();
+  headers.append('Content-Type', 'application/json')
+  headers.append('auth-token', cookies.get('token'))
 
-    fetch("http://localhost:3000/user/getData", {
-      method: "GET",
-      headers: headers
-    }).then((response) => response.json())
-    .then((responseJson) => {
-      console.log(responseJson);
-      this.setState(responseJson);
-    })
-  }
+  fetch("http://localhost:3000/user/getData", {
+    method: "GET",
+    headers: headers
+  }).then((response) => response.json())
+  .then((responseJson) => {
+    console.log(responseJson);
+    this.setState(responseJson);
+    //currentEmail = this.state.contactInformation.mail;
+    //console.log(currentEmail);
+  })
+}
 
   
   
@@ -112,7 +124,9 @@ class ConfirmChanges extends Component {
         facebookURL: this.state.facebook,
         image64: this.state.image64,
         imageName: this.state.imageName,
-        adress: this.state.location
+        adress: this.state.location,
+        suburb: this.state.suburb,
+        city: this.state.city
     }
     
         fetch("http://localhost:3000/listing/update", {
@@ -121,7 +135,10 @@ class ConfirmChanges extends Component {
             body: JSON.stringify(req),
         }).then((response)=>{
             console.log(response.body);
-            if (response.ok){alert("User updated successfully");}
+            if (response.ok){
+              alert("User updated successfully")
+              window.location = ("/account");
+            }
             else{alert("Error updating user") }
         })
 
@@ -187,7 +204,9 @@ getBase64 = (file) => {
             <br/>
             <input onChange={this.handleChange} name="name" id="name" className="name" placeholder="Company Name"/>
             <br/>
-            <input onChange={this.handleChange} name="location" id="location" className="location" placeholder="City" />
+            <input onChange={this.handleChange} name="location" id="location" className="location" placeholder="Business Address" />
+            <input onChange={this.handleChange} name="suburb" id="suburb" className="suburb" placeholder="Suburb" />
+            <input onChange={this.handleChange} name="city" id="city" className="city" placeholder="City" />
             <br/>
             <select name="service" value={this.state.value} onChange={this.handleChange}>
                         <option value="Plumbing">Plumbing</option>

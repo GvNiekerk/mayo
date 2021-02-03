@@ -40,6 +40,7 @@ class card extends Component
                 <button onClick={this.openListing} className="greenBtn" type="submit">View Service</button>
                 <h3 className="price">{this.props.hourlyRate}</h3>
                 <h3 className="rate">p/h</h3>
+                <h3 className="location">{this.props.city}, {this.props.suburb}</h3>
             </div>
         </div>
 
