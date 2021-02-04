@@ -9,50 +9,54 @@ class home extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { startIndex: 0, cards: [],searchLocation : '',
-        searchService: '' };
+        this.state = {
+            startIndex: 0, 
+            cards: [], 
+            service: '',
+            location: ''
+        };
         this.handleChange = this.handleChange.bind(this);
         this.RequestSearch = this.RequestSearch.bind(this);
         this.getCards();
     }
-    handleChange(event) {
+
+    handleChange = (event) => {
         switch (event.target.name) {
             case 'searchService':
-                this.setState({ searchService: event.target.value })
-                 break; 
+                this.setState({ service: event.target.value })
+                break;
             case 'searchLocation':
-                this.setState({ searchLocation: event.target.value })
+                this.setState({ location: event.target.value })
                 break;
         }
     }
 
     getCards = () => {
-        console.log('calling to get shit')
-        var cards = [];
-
-        fetch(`http://localhost:3000/home/getlistings?start=${this.state.startIndex}`, {
+        fetch(`http://localhost:3000/home/getlistings?start=${this.state.startIndex}&service=${this.state.service}&location=${this.state.location}`, {
             method: "GET",
         }).then((response) => response.json())
             .then((responseJson) => {
-                console.log(`retrieved shit:`)
-                console.log(responseJson)
+                var cards = [];
+        
                 responseJson.forEach(card => {
                     cards.push(<Card image={card.image64} companyName={card.companyname} city={card.city} suburb={card.suburb} adress={card.adress} hourlyRate={card.hourlyRate} userEmail={card.userEmail} service={card.service} />)
                 });
-                this.setState({cards: cards})
+                this.setState({ cards: cards })
             })
     }
 
     changePage = (isNext) => {
         const newNumber = isNext ? this.state.startIndex + 5 : this.state.startIndex - 5;
-        this.setState({startIndex: newNumber});
+        this.setState({ startIndex: newNumber });
 
         this.getCards();
     }
 
+    updateCards = (cards) => {
+    }
+
     RequestSearch = () => {
-        console.log('calling to get search shit')
-        var cards = [];
+
         var req = {
             service: this.state.searchService,
             city: this.state.searchLocation,
@@ -62,20 +66,20 @@ class home extends Component {
         console.log(req);
 
         console.log(JSON.stringify(req));
-        fetch(`http://localhost:3000/service/search?start=${this.state.startIndex}&service=${this.state.searchService}&city=${this.state.searchLocation}&suburb=${this.state.searchLocation}&adress=${this.state.searchLocation}`, {
+        fetch(`http://localhost:3000/home/getlistings?start=${this.state.startIndex}&service=${this.state.service}&location=${this.state.location}`, {
             method: "GET",
 
         }).then((response) => response.json())
             .then((responseJson) => {
-                console.log(`retrieved shit:`)
-                console.log(responseJson)
+                var cards = [];
+        
                 responseJson.forEach(card => {
-                    cards.push(<Card image={card.image64} companyName={card.companyname} city={card.city} suburb={card.suburb} adres={card.adres} hourlyRate={card.hourlyRate} userEmail={card.userEmail} service={card.service} />)
+                    cards.push(<Card image={card.image64} companyName={card.companyname} city={card.city} suburb={card.suburb} adress={card.adress} hourlyRate={card.hourlyRate} userEmail={card.userEmail} service={card.service} />)
                 });
-                this.setState({cards: cards})
+                this.setState({ cards: cards })
             })
     }
-    
+
 
     render() {
 
@@ -99,8 +103,8 @@ class home extends Component {
                     <div>
                         {this.state.cards}
                     </div>
-                    <button onClick={() => { this.changePage(false)}}>Previous</button>
-                    <button onClick={() => { this.changePage(true)}}>Next</button>
+                    <button onClick={() => { this.changePage(false) }}>Previous</button>
+                    <button onClick={() => { this.changePage(true) }}>Next</button>
                 </div>
 
 

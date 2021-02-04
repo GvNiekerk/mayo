@@ -2,7 +2,7 @@ import { Component } from "react";
 import './card.css';
 import axios from 'axios';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
-import detaillist from "./detailedlisting";
+import Detaillist from "./detailedlisting";
 
 
 
@@ -11,6 +11,7 @@ class card extends Component
     constructor(props) {
         
         super(props);
+
     }
 
     openListing(event) {
@@ -25,7 +26,9 @@ class card extends Component
             
             <Router>
             
-
+            <Switch>
+            <Route exact path="/detaillisting" render={(props) => <Detaillist {...props} id={props.userEmail} />} />
+            </Switch>
             
             <div className="card">
             <div className="upper container">
@@ -37,7 +40,7 @@ class card extends Component
                 <h3 className="busname">{this.props.companyName}</h3>
                 <h4 className="service">{this.props.service}</h4>
                 <p>{this.props.userEmail} </p>
-                <button onClick={this.openListing} className="greenBtn" type="submit">View Service</button>
+                <Link to="detaillisting" className="greenBtn" type="submit">View Service</Link>
                 <h3 className="price">{this.props.hourlyRate}</h3>
                 <h3 className="rate">p/h</h3>
                 <h3 className="location">{this.props.city}, {this.props.suburb}</h3>
@@ -46,7 +49,7 @@ class card extends Component
 
         
         <Switch>
-            <Route path= "/listing" component={detaillist} />
+            <Route path= "/listing" component={Detaillist} />
         </Switch>  
 
         </Router>
