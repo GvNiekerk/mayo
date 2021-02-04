@@ -37,7 +37,7 @@ class home extends Component {
                 console.log(`retrieved shit:`)
                 console.log(responseJson)
                 responseJson.forEach(card => {
-                    cards.push(<Card image={card.image64} companyName={card.companyname} city={card.city} suburb={card.suburb} adres={card.adres} hourlyRate={card.hourlyRate} userEmail={card.userEmail} service={card.service} />)
+                    cards.push(<Card image={card.image64} companyName={card.companyname} city={card.city} suburb={card.suburb} adress={card.adress} hourlyRate={card.hourlyRate} userEmail={card.userEmail} service={card.service} />)
                 });
                 this.setState({cards: cards})
             })
@@ -59,11 +59,12 @@ class home extends Component {
             suburb: this.state.searchLocation,
             adress: this.state.searchLocation
         }
+        console.log(req);
 
         console.log(JSON.stringify(req));
-        fetch(`http://localhost:3000/service/search?start=${this.state.startIndex}`, {
-            method: "POST",
-            body: JSON.stringify(req),
+        fetch(`http://localhost:3000/service/search?start=${this.state.startIndex}&service=${this.state.searchService}&city=${this.state.searchLocation}&suburb=${this.state.searchLocation}&adress=${this.state.searchLocation}`, {
+            method: "GET",
+
         }).then((response) => response.json())
             .then((responseJson) => {
                 console.log(`retrieved shit:`)
@@ -93,7 +94,7 @@ class home extends Component {
                         <option value="Gardening">Gardening</option>
                         <option value="Construction">Construction</option>
                     </select>
-                    <input type="text" className="searchLocation" placeholder="Location" />
+                    <input type="text" name="searchLocation" onChange={this.handleChange} className="whiteInput" placeholder="Location" />
                     <button onClick={this.RequestSearch} className="search-btn" type="button">Search</button>
                     <div>
                         {this.state.cards}
