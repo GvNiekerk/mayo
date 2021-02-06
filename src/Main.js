@@ -33,16 +33,16 @@ class Main extends Component {
                         <button className="button-home">Home</button>
                     </Link>
                     <Link to="/about">
-                        <button className="button-about">About Us</button>
+                        <button className="button-home">About Us</button>
                     </Link>
                     <Link to="/login">
-                        <button className="button-signup">Login</button>
+                        <button className="button-home">Login</button>
                     </Link>
                     <Link to="/recentview">
-                        <button className="button-viewed">Recently viewed</button>
+                        <button className="button-home">Recently viewed</button>
                     </Link>
                     <Link to="/adminLogin">
-                        <button className="button-viewed">Admin Login</button>
+                        <button className="button-home">Admin Login</button>
                     </Link>
 
                     <div>

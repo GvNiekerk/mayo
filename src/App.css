@@ -2,21 +2,30 @@
   outline: none;
 }
 .App {
+  background-color: rgb(248,248,255);
   text-align: center;
-  background-image: url("Colour-bg1.png");
-  background-attachment: fixed;
   height: 100%;
   margin-top: 5%;
   margin-bottom: 0%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   width: 100%;
+  justify-content: flexbox;
+  display: flexbox;
 }
 
 .footer{
-  background-color: rgb(85, 72, 85);
+  background-color: rgb(248,248,255);
   padding-bottom: 0%;
   bottom:20%;
 }
+
+.footer-text{
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif; 
+  color: rgb(105,105,105);
+}
+
+
 .footerbutton{
   color: #c0adc4;
 }
@@ -27,9 +36,10 @@
   
 .navhead{
   text-align: center;
-  background-color: rgb(91, 85, 97);
+  background-color: rgb(rgb(46,103,248));
   height: 17%;
   margin-top: -7%;
+  justify-content:center;
 }
 .hyperlink{
   font-size: large;
@@ -71,23 +81,13 @@
 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .heading{
   animation: Name-Enter 1 2s linear;
   text-align: center;
-  letter-spacing: 4%;
+  letter-spacing: 6%;
   font-size: 300%;
-  color: rgb(188, 178, 201);
+  color: rgb(248,248,255);
+  font-family: 'Roboto', sans-serif;
   margin-top: -10%;
 }
 
@@ -131,14 +131,7 @@
   color: #c4e6f0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
 
 .description{
   color: rgb(179, 179, 218);
@@ -159,96 +152,79 @@
   margin-left: 2%;
 }
 
+/* Button CSS */
 .button-home{
   padding: 1%;
   padding-left: 2%;
   padding-right: 2%;
   margin-left: -0.5%;
-  border-radius: 5px;
-  background-color: rgb(204, 103, 250);
+  background-color: rgb(46,103,248);
   color: antiquewhite;
-  margin-left: 60%;
-  position: relative; left: 1%; top: -110px;
+  border: none;
+  color: #f8f8ff;
+  border-radius: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  display:inline-flexbox;
+  position:relative;
+  margin-right: 35px;
+  right: -500px;
+  top: 50px;
 }
 .button-home:hover{
   transform: translateY(-0.25rem);
   transition: transform 200ms;
   cursor:pointer;
-  background-color: rgb(235, 149, 109);
+  background-color: rgb(46,103,248);
 
 }
 
-.button-about{
-  padding: 1%;
-  border-radius: 5px;
-  padding-left: 2%;
-  padding-right: 2%;
-  margin-top: -10%;
-  margin-left: -0.5%;
-  background-color: rgb(204, 103, 250);
-  color: antiquewhite;
-  position: relative; left: 1%; top: -110px;
-  
-}
-.button-about:hover{
-  transform: translateY(-0.25rem);
-  transition: transform 200ms;
-  cursor:pointer;
-  background-color: rgb(235, 149, 109);
 
-}
-.button-signup{
-  padding: 1%;
-  border-radius: 5px;
-  background-color: rgb(204, 103, 250);
-  color: antiquewhite;
-  position: relative; left: 1%; top: -110px;
-  padding-left: 2%;
-  padding-right: 2%;
-  margin-left: -0.5%;
-}
-.button-signup:hover{
-  transform: translateY(-0.25rem);
-  transition: transform 200ms;
-  cursor:pointer;
-  background-color: rgb(235, 149, 109);
-
-}
 .search-btn
 {
   height: 50px;
   width: 8%;
-  background-color: rgb(204, 103, 250);
+  background-color: rgb(46,103,248);
   border: none;
-  color: #000;
+  color: #f8f8ff;
   border-radius: 25px;
   margin-left: 2%;
   margin-top: -5%;
   justify-items: top;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
 .search-btn:hover{
-  background: #ffc107;
+  background: rgb(46,103,248);
   cursor: pointer;
 }
 
-
-.button-viewed{
-  margin-left: -0.5%;
+.page-button{
   padding: 1%;
   padding-left: 2%;
   padding-right: 2%;
-  border-radius: 5px;
-  background-color: rgb(204, 103, 250);
+  margin-left: -0.5%;
+  background-color: rgb(46,103,248);
   color: antiquewhite;
-  position: relative; left: 1%; top: -110px;
+  border: none;
+  color: #f8f8ff;
+  border-radius: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  display:inline-flexbox;
+  position:relative;
+  min-width: 3em;
 }
-.button-viewed:hover{
+.page-button:hover{
   transform: translateY(-0.25rem);
   transition: transform 200ms;
   cursor:pointer;
-  background-color: rgb(235, 149, 109);
+  background-color: rgb(46,103,248);
 
 }
+
+
+
 
 .hor-flex{
   display: flex;
@@ -289,11 +265,13 @@
 }
 
 .ayo{
-  margin-left: -74%;
-  margin-top: -7%;
-  color: #fdfcfd;
-  font-size: calc(45px + 2vmin);
-
+  margin: none;
+  top: .5%;
+  left: 8.5%;
+  font-family: 'Roboto', sans-serif; 
+  color: rgb(105,105,105);
+  font-size: calc(48px + 2vmin);
+  position: fixed;
   
 }
 .RegisterBox{
@@ -325,9 +303,10 @@
   font-size: small;
 }
 .logo{
-  margin-top: 0%;
-  margin-right: 88%;
+  margin-top: 2%;
+  left: 1%;
   border: 5px;
+  position: fixed;
 }
 .whiteInput{
   background-color: white;
@@ -344,7 +323,7 @@
   background-color: white;
   border: none;
   color: black;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   border-radius: 6px;
   box-shadow: 6px 6px #a421c5;
   margin: 10px;
@@ -399,18 +378,28 @@
   border-radius: 10px;
   box-shadow: 0px 1px 10px 1px black;
   overflow: hidden;
-  margin-left: 18%;
+  margin-left: 30em;
   margin-top: 15px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding-left: 200px;
   padding-right: 200px;
+  justify-content: center;
+  display: flexbox;
+  right: center;
+  position:relative;
+}
+
+.cards-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 /* Hanno CSS Code vir die user account page */
 body{
-  background-image: url("bg.png");
   	background-size:100% 100%;
-	font-family:"Open Sans", sans-serif;
+	font-family:"Roboto", sans-serif;
 }
 a.nostyle{
 	color:inherit;

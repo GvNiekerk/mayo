@@ -86,12 +86,8 @@ class home extends Component {
         return (
             <div className="App">
 
-
-                <div>
-                    <h2 className="heading">Get the best price for what you need done</h2>
-                </div>
-
-                <div className="App">
+               
+               
                     <select name="searchService" value={this.state.value} onChange={this.handleChange}>
                         <option value="Plumbing">Plumbing</option>
                         <option value="Electrical">Electrical</option>
@@ -100,12 +96,12 @@ class home extends Component {
                     </select>
                     <input type="text" name="searchLocation" onChange={this.handleChange} className="whiteInput" placeholder="Location" />
                     <button onClick={this.RequestSearch} className="search-btn" type="button">Search</button>
-                    <div>
+                    <div className="cards-container">
                         {this.state.cards}
                     </div>
-                    <button onClick={() => { this.changePage(false) }}>Previous</button>
-                    <button onClick={() => { this.changePage(true) }}>Next</button>
-                </div>
+                    <button className="page-button" onClick={() => { this.changePage(false) }}>Previous</button>
+                    <button className="page-button" onClick={() => { this.changePage(true) }}>Next</button>
+               
 
 
             </div>

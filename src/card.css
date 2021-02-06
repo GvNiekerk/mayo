@@ -1,16 +1,18 @@
 .card{
-    height: 200px;
-    background: white;
+    width: 500px;
+    height: 150px;
+    background: rgb(207, 205, 205);
     color: #3e508b;
     border-radius: 10px;
-    box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.329);
+    box-shadow: 0px 1px 10px 1px black;
     overflow: hidden;
-    width: 80%;
-    align-items: center;
-    max-width: 500px;
-    margin-top: 15px;
-    font-family: 'Montserrat', sans-serif;
-    transition: 0.6s;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 200px;
+    padding-right: 200px;
+    justify-content: center;
+    display: flexbox;
+    right: center;
+    position:relative;
 }
 .card:hover{
     background: whitesmoke;
