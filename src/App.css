@@ -2,7 +2,7 @@
   outline: none;
 }
 .App {
-  background-color: rgb(248,248,255);
+  background-color: whitesmoke;
   text-align: center;
   height: 100%;
   margin-top: 5%;
@@ -14,7 +14,7 @@
 }
 
 .footer{
-  background-color: rgb(248,248,255);
+  background-color: whitesmoke;
   padding-bottom: 0%;
   bottom:20%;
 }
@@ -49,7 +49,7 @@
 }
 .estimateprice{
   margin-top: -4.5%;
-  background-color: #8875a0;
+  background-color: ghostwhite;
   border-radius: 10%;
   font-size: medium;
   padding-top: 7%;
@@ -59,7 +59,7 @@
 
 .HeaderTop {
   text-align: center;
-  background-color: blueviolet;
+  background-color: ghostwhite;
   height: 100 px;
   margin-top: -25px;
   display: flex;
@@ -67,14 +67,14 @@
   align-items: flex-start;
 }
 .Dark-Section{
-  background-color: #1dc9c9;
+  background-color: #2E67F8;
   
   padding: 100px;
   height: 150px;
 }
 
 .Light-Section{
-  background-color: #20acbe;
+  background-color: #2E67F8;
   padding: 200px;
   height:300px;
   margin-top: -25px;
@@ -93,11 +93,12 @@
 
 .para{
   font-size: x-large;
-  background-color: rgb(156, 137, 173);
+  background-color: ghostwhite;
+  margin-top: 180px;
   margin-left: 10%;
+  border-radius: 50px;
   margin-right: 10%;
-  border-radius: 12%;
-  color: rgb(208, 219, 228);
+  color: rgb(167, 167, 167);
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 2%;
@@ -122,19 +123,19 @@
     letter-spacing: 100px;
     margin-left: 15px;
     font-size: 70px;
-    color: rgb(172, 189, 219);
+    color: ghostwhite;
 
   }
 }
 
 .App-link {
-  color: #c4e6f0;
+  color: ghostwhite;
 }
 
 
 
 .description{
-  color: rgb(179, 179, 218);
+  color: ghost;
   margin-top: -50px;
   margin-bottom: 20px;
   
@@ -158,24 +159,23 @@
   padding-left: 2%;
   padding-right: 2%;
   margin-left: -0.5%;
-  background-color: rgb(46,103,248);
-  color: antiquewhite;
+  background-color: #2E67F8;
+  color: ghostwhite;
   border: none;
-  color: #f8f8ff;
   border-radius: 25px;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   display:inline-flexbox;
   position:relative;
-  margin-right: 35px;
-  right: -500px;
+  margin-right: 18px;
+  right: -400px;
   top: 50px;
 }
 .button-home:hover{
   transform: translateY(-0.25rem);
   transition: transform 200ms;
   cursor:pointer;
-  background-color: rgb(46,103,248);
+  background-color: #628efc;
 
 }
 
@@ -184,18 +184,19 @@
 {
   height: 50px;
   width: 8%;
-  background-color: rgb(46,103,248);
+  background-color: #2E67F8;
   border: none;
-  color: #f8f8ff;
+  color: ghostwhite;
   border-radius: 25px;
   margin-left: 2%;
   margin-top: -5%;
+  margin-bottom: 3%;
   justify-items: top;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
 }
 .search-btn:hover{
-  background: rgb(46,103,248);
+  background:  #628efc;
   cursor: pointer;
 }
 
@@ -203,11 +204,12 @@
   padding: 1%;
   padding-left: 2%;
   padding-right: 2%;
-  margin-left: -0.5%;
-  background-color: rgb(46,103,248);
-  color: antiquewhite;
+  margin-left: 1%;
+  margin-top: 2%;
+  background-color: #2E67F8;
+  color: ghostwhite;
   border: none;
-  color: #f8f8ff;
+  color:ghostwhite;
   border-radius: 25px;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -219,12 +221,8 @@
   transform: translateY(-0.25rem);
   transition: transform 200ms;
   cursor:pointer;
-  background-color: rgb(46,103,248);
-
+  background-color:  #628efc;
 }
-
-
-
 
 .hor-flex{
   display: flex;
@@ -234,19 +232,17 @@
 }
 
 .greenBtn{
-  background-color: #35cb9d;
-  border: none;
-  color: white;
+  background-color:#2E67F8;
+  margin-top: 100px;
+  color: ghostwhite;
   padding: 1% 2%;
   border-radius: 6px;
-  box-shadow: 6px 6px #070108;
-  margin: 1%;
 }
 
 .blueBtn{
-  background-color: #292ce7;
+  background-color: #2E67F8;
   border: none;
-  color: white;
+  color: ghostwhite;
   padding: 10px;
   border-radius: 6px;
   box-shadow: 6px 6px #0a020c;
@@ -255,27 +251,27 @@
   width: 180px;
 }
 .aboutbtn{
-  background-color: #385fcb;
+  background-color: #2E67F8;
   border: none;
-  color: white;
+  color: ghostwhite;
   padding: 1% 3%;
   border-radius: 6px;
-  box-shadow: 6px 6px #a421c5;
+  box-shadow: 6px 6px ghostwhite;
   margin-top: 5%;
 }
 
 .ayo{
   margin: none;
-  top: .5%;
-  left: 8.5%;
+  top: .4%;
+  left: 10.5%;
   font-family: 'Roboto', sans-serif; 
-  color: rgb(105,105,105);
+  color: dimgray;
   font-size: calc(48px + 2vmin);
   position: fixed;
   
 }
 .RegisterBox{
-  background-color: #904edb;
+  background-color: ghostwhite;
   margin-top: 17%;
   padding-left: 70%;
   padding-right: 70%;
@@ -293,7 +289,7 @@
   margin-left: 25%;
   margin-right: 25%;
   margin-top: 2%;
-  background-color:#c0adc4 ;
+  background-color:ghostwhite ;
   border-radius: 5px;
   color: #000;
   font-size:small;
@@ -309,28 +305,28 @@
   position: fixed;
 }
 .whiteInput{
-  background-color: white;
+  background-color: rgb(223, 222, 222);
   border: none;
   width: 350px;
   color: rgb(0, 0, 0);
   padding: 15px 15px;
   border-radius: 6px;
-  box-shadow: 6px 6px #a421c5;
+  box-shadow: 6px 6px #2E67F8;
   margin: 13px;
 }
 
 .largeInput{
-  background-color: white;
+  background-color: ghostwhite;
   border: none;
   color: black;
   font-family: 'Roboto', sans-serif;
   border-radius: 6px;
-  box-shadow: 6px 6px #a421c5;
+  box-shadow: 6px 6px #2E67F8;
   margin: 10px;
 }
 
 .App-header {
-  background-color:blueviolet;
+  background-color:ghostwhite;
   min-height: 800px;
   display: flex;
   margin-top: -346.5px;
@@ -342,7 +338,7 @@
 }
 
 .detailedbackround{
-  background-color: blueviolet;
+  background-color: ghostwhite;
   height: 300px;
 }
 .fb{
@@ -377,7 +373,6 @@
   color: #3e508b;
   border-radius: 10px;
   box-shadow: 0px 1px 10px 1px black;
-  overflow: hidden;
   margin-left: 30em;
   margin-top: 15px;
   font-family: 'Roboto', sans-serif;
@@ -410,7 +405,7 @@ a.nostyle{
 div.portfoliocard{
 	position:relative;
 	height:800px;
-	width:900px;
+	width:1200px;
 	background:rgba(255,255,255,1);
 	border:1px solid rgba(0,0,0,0.7);
 	box-shadow:0px -1px 3px rgba(0,0,0,0.1),
@@ -434,7 +429,7 @@ div.portfoliocard{
 div.portfoliocard div.coverphoto{
 	width:100%;
 	height:120px;
-	background: pink;
+	background: #517e9c;
 	background-position:center center;
 	border-top-right-radius:5px;
 	border-top-left-radius:5px;
@@ -544,4 +539,9 @@ div.portfoliocard div.follow_count{
 	font-weight:400;
 	font-size:25px;
 	color:rgba(140,140,140,1);
+}
+
+.dropbox{
+  padding: 5px 20px;
+  border-radius: 5px;
 }

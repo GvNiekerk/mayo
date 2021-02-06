@@ -32,17 +32,18 @@ class card extends Component
             <div className="card">
             <div className="upper container">
                 <div className="image-container">
-                    <img src={this.props.image} alt="" height="100px" width="100px" />
+                    <img src={this.props.image}  alt="" height="100px" width="100px" />
                 </div>
             </div>
             <div >
-                <h3 className="busname">{this.props.companyName}</h3>
+                <h2 className="busname">{this.props.companyName}</h2>
                 <h4 className="service">{this.props.service}</h4>
-                <p>{this.props.userEmail} </p>
-                <Link to="detaillisting" className="greenBtn" type="submit">View Service</Link>
+                <p className="email">{this.props.userEmail} </p>
                 <h3 className="price">{this.props.hourlyRate}</h3>
                 <h3 className="rate">p/h</h3>
-                <h3 className="location">{this.props.city}, {this.props.suburb}</h3>
+                <h3 className="buslocation">{this.props.city}, {this.props.suburb}</h3>
+                <Link to="detaillisting"  type="submit"><button className="viewbtn">View Listing</button></Link>
+
             </div>
         </div>
 

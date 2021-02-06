@@ -1,11 +1,11 @@
 .card{
     width: 500px;
-    height: 150px;
+    height: 220px;
     background: rgb(207, 205, 205);
-    color: #3e508b;
     border-radius: 10px;
+    margin-right: 40%;
     box-shadow: 0px 1px 10px 1px black;
-    overflow: hidden;
+    color: #3e508b;
     font-family: 'Roboto', sans-serif;
     padding-left: 200px;
     padding-right: 200px;
@@ -15,21 +15,21 @@
     position:relative;
 }
 .card:hover{
-    background: whitesmoke;
-  transform: scale(1.1);
-  cursor:pointer;
+    background: rgb(226, 226, 226);
+    transform: scale(1);
+    cursor:pointer;
 
 }
 
 .price{
-    margin-top: -135px;
+    margin-top: -30px;
     margin-left: 550px;
     font-size: 37px;
 
 }
 
 .rate{
-    margin-top: -30px;
+    margin-top: -35px;
     margin-left: 550px;
     font-size: 20px;
 
@@ -49,11 +49,11 @@
     border-radius: 50%;
     padding: 5px;
     margin-left: -900px;
+    margin-top: 5%;
     transform: translate(95px,45px);
 }
 
 img{
-    border: 2px solid #8e00b9;
 }
 
 .lower-container{
@@ -61,7 +61,7 @@ img{
     margin-top: 60px;
     background: blueviolet;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
 
 }
 
@@ -91,27 +91,30 @@ img{
     font-weight: 300;
 }
 .busname{
-    text-align: left;
-    margin-top: -100px;
-    font-size: 25px;
-    margin-left: 132px;
+    font-size: x-large;
+    position: relative; left: -10px; top: -140px;
+    color: #0f3188;
+    font-family: 'Roboto', sans-serif;
 }
 
-button{
-    margin: 1rem;
+.email{
+    font-size: 20px;
+    color: #737374;
+}
+
+.button{
     color: #fff9fc;
     font: bold;
     background-color: rgb(135, 88, 148);
     border: 2px solid #4f2161;
     padding: 0.6rem;
-    margin-top: 40px;
     border-radius: 6px;
     transition-duration: 0.5s;
     animation: ease-in-out;
 }
 
 button:hover{
-    background-image: linear-gradient(to left,#2d00f7,#ff0291);
+    background-image: linear-gradient(to left, #628efc);
     transform: scale(1.2);
     border: none;
     color: white;
@@ -124,10 +127,9 @@ button:hover{
     color: #3e508b;
     border-radius: 10px;
     box-shadow: 0px 1px 10px 1px black;
-    overflow: hidden;
-    margin-left: 24.5%;
+    margin-left: 10%;
     margin-top: 15px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding-left: 200px;
     padding-right: 200px;
 }
@@ -141,5 +143,36 @@ button:hover{
     background-color: rgb(204, 72, 72);
     cursor: pointer;
 }
+
+.service{
+    font-size: large;
+    color: #737374;
+    font-family: 'Roboto', sans-serif;
+    margin-top: -145px;
+}
+
+.buslocation{
+    font-size: large;
+    color: #737374;
+    font-family: 'Roboto', sans-serif;
+    margin-top: -40px;
+}
+
+.viewbtn{
+    border-color: #2E67F8;
+    padding: 10px 10px;
+    background-color: #2E67F8;
+    border-radius: 8px;
+    color: ghostwhite;
+}
+
+.viewbtn:hover{
+    transform: translateY(-0.1rem);
+    transition: transform 200ms;
+    cursor:pointer;
+    background-color:  #628efc;
+    color: ghostwhite;
+
+  }
 
 

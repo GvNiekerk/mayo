@@ -39,7 +39,7 @@ class home extends Component {
                 var cards = [];
         
                 responseJson.forEach(card => {
-                    cards.push(<Card image={card.image64} companyName={card.companyname} city={card.city} suburb={card.suburb} adress={card.adress} hourlyRate={card.hourlyRate} userEmail={card.userEmail} service={card.service} />)
+                    cards.push(<Card image={card.image64} companyName={card.companyName} city={card.city} suburb={card.suburb} adress={card.adress} hourlyRate={card.hourlyRate} userEmail={card.userEmail} service={card.service} />)
                 });
                 this.setState({ cards: cards })
             })
@@ -88,7 +88,7 @@ class home extends Component {
 
                
                
-                    <select name="searchService" value={this.state.value} onChange={this.handleChange}>
+                    <select className="dropbox" name="searchService" value={this.state.value} onChange={this.handleChange}>
                         <option value="Plumbing">Plumbing</option>
                         <option value="Electrical">Electrical</option>
                         <option value="Gardening">Gardening</option>
