@@ -27,7 +27,7 @@ class card extends Component
             <Router>
             
             <Switch>
-            <Route exact path="/detaillisting" render={(props) => <Detaillist {...props} id={props.userEmail} />} />
+            <Route exact path="/detaillisting" render={(props) => <Detaillist {...props} userMail={this.props.userEmail} />} />
             </Switch>
             
             <div className="card">

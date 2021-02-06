@@ -5,6 +5,7 @@ class detailedlisting extends Component {
 
   constructor(props) {
     super(props);
+    
 
     this.state = {
       totalClicks: 0,
@@ -19,7 +20,7 @@ class detailedlisting extends Component {
       contactInformation: {
         work: "N/A",
         website: "N/A",
-        mail: "N/A",
+        mail: "",
         phone: "N/A",
         instaURL: "N/A",
         twitterURL: "N/A",
@@ -32,14 +33,12 @@ class detailedlisting extends Component {
   }
 
   getData = () => {
+    //var headers = new Headers();
+   // headers.append('Content-Type', 'application/json')
+    //headers.append('auth-token', cookies.get('token'))
 
-    var headers = new Headers();
-    headers.append('Content-Type', 'application/json')
-    headers.append('auth-token', cookies.get('token'))
-
-    fetch("http://localhost:3000/profile/getUser", {
+    fetch(`http://localhost:3000/profile/getUser?userEmail=${this.props.userMail}`, {
       method: "GET",
-      headers: headers
     }).then((response) => response.json())
     .then((responseJson) => {
       console.log(responseJson);
