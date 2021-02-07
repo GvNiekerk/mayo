@@ -5,10 +5,11 @@ import React, { useState } from 'react';
 
 
 class home extends Component {
-
+    
     constructor(props) {
-        super(props);
+        window.alert("COOKIES - By using this website, you automatically accept that we use cookies.");
 
+        super(props);
         this.state = {
             startIndex: 0, 
             cards: [], 

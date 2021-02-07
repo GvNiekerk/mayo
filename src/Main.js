@@ -24,6 +24,7 @@ class Main extends Component {
     render() {
         return (
 
+
             <div className="navhead">
 
                 <img className="logo" src={logo} />

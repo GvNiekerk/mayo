@@ -36,7 +36,7 @@ class footer extends Component
                  <div>
                  <h2 className="footer-text">Contact us</h2>
 
-                 <img onClick={() => this.facebookClick()} className="fbfoot" src={face}/>
+                <img onClick={() => this.facebookClick()} className="fbfoot" src={face}/>
                 <img onClick={() => this.instaClick()} className="fbfoot" src={insta}/>
                 <img onClick={() => this.twitClick()} className="fbfoot" src={twit}/>
                 <img onClick={() => this.mailClick()} className="fbfoot" src={email}/>
