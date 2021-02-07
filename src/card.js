@@ -5,14 +5,23 @@ import Detaillist from "./detailedlisting";
 
 
 
+
 class card extends Component 
 {
     constructor(props) {
         
         super(props);
 
+        this.state = {
+            showChild: true
+          };
     }
-
+    closeChild = () => {
+        this.setState({
+          showChild: false
+        });
+        window.location = ("/");
+      };
     openListing(event) {
         window.location = ("/listing");
         
@@ -24,10 +33,11 @@ class card extends Component
         return (
             
             <Router>
-            
+            {this.state.showChild&&
             <Switch>
-            <Route exact path="/detaillisting" render={(props) => <Detaillist {...props} userMail={this.props.userEmail} />} />
+            <Route exact path="/detaillisting" render={(props) => <Detaillist {...props} userMail={this.props.userEmail} onClose={this.closeChild} />} />
             </Switch>
+             }
             
             <div className="card">
             <div className="upper container">

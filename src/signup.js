@@ -167,6 +167,7 @@ class signup extends Component {
                     <input onChange={this.handleChange} name="email" id="emailtxt" className="whiteInput" placeholder="email" />
                     <input onChange={this.handleChange} name="businessName" id="bustxt" className="whiteInput" placeholder="Company Name" />
                     <select name="service" className="dropbox" value={this.state.value} onChange={this.handleChange}>
+                        <option >-Select Service-</option>
                         <option value="Plumbing">Plumbing</option>
                         <option value="Electrical">Electrical</option>
                         <option value="Gardening">Gardening</option>

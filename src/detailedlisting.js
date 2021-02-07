@@ -25,10 +25,9 @@ class detailedlisting extends Component {
         instaURL: "N/A",
         twitterURL: "N/A",
         facebookURL: "N/A"
-
       }
     }
-
+    this.RequestClose = this.RequestClose.bind(this);
     this.getData();
   }
 
@@ -44,6 +43,10 @@ class detailedlisting extends Component {
       console.log(responseJson);
       this.setState(responseJson);
     })
+  }
+
+  RequestClose = () =>{
+    this.setState({ showModal: false });
   }
 
 
@@ -90,7 +93,7 @@ class detailedlisting extends Component {
               <li className="facebook">{this.state.contactInformation.facebookURL}</li>
               <li className="twitter">{this.state.contactInformation.twitterURL}</li>
               <li className="rate">{this.state.hourlyRate}</li>
-
+              <button onClick={this.props.onClose} className="btnClose">Close</button>
 
               {/* <li className="resume"><a href="#" className="nostyle"></a></li> */}
             </ul>

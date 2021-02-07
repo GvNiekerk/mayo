@@ -406,6 +406,7 @@
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
+  align-content: center;
 }
 
 /* Hanno CSS Code vir die user account page */
@@ -577,6 +578,8 @@ div.portfoliocard div.follow_count{
 .dropbox{
   padding: 5px 20px;
   border-radius: 5px;
+  color:rgb(107, 106, 106);
+  background-color: rgb(223, 222, 222);
 }
 
 .debittxt{
@@ -625,4 +628,24 @@ div.portfoliocard div.follow_count{
   transition: transform 200ms;
   cursor:pointer;
   background-color: #628efc;
+}
+
+.btnClose{
+  background-color: #f82e2e;
+  color: ghostwhite;
+  border: none;
+  margin-top: 8px;
+  margin-left: 10px;
+  padding: 15px 20px;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  display:inline-flexbox;
+}
+
+.btnClose:hover{
+  transform: translateY(-0.2rem);
+  transition: transform 200ms;
+  cursor:pointer;
+  background-color: #ac1717;
 }

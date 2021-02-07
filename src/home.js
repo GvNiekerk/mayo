@@ -89,6 +89,7 @@ class home extends Component {
                
                
                     <select className="dropbox" name="searchService" value={this.state.value} onChange={this.handleChange}>
+                        <option >-Select Service-</option>
                         <option value="Plumbing">Plumbing</option>
                         <option value="Electrical">Electrical</option>
                         <option value="Gardening">Gardening</option>
