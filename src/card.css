@@ -159,20 +159,22 @@ button:hover{
 }
 
 .viewbtn{
-    border-color: #2E67F8;
     padding: 10px 10px;
     background-color: #2E67F8;
-    border-radius: 8px;
     color: ghostwhite;
+    border-radius: 23px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border: none;
+  
 }
 
 .viewbtn:hover{
-    transform: translateY(-0.1rem);
+    transform: translateY(-0.25rem);
     transition: transform 200ms;
     cursor:pointer;
-    background-color:  #628efc;
-    color: ghostwhite;
-
+    background-color: #628efc;
+  
   }
 
 

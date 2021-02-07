@@ -26,6 +26,7 @@ class Login extends Component {
                 break;
         }
     }
+    
 
     RequestLogin(event) {
         event.preventDefault();
@@ -64,15 +65,15 @@ class Login extends Component {
         return (
             <div className="App-header">
 
-                <h1>Login</h1>
+                <h1 className="heading">Login</h1>
                 <input onChange={this.handleChange} name="email" id="email" className="whiteInput" placeholder="email" />
                 <br />
                 <input onChange={this.handleChange} name="password" id="password" className="whiteInput" placeholder="password" type="password" />
                 <br />
-                <button onClick={this.RequestLogin} className="greenBtn" type="submit">Login</button>
+                <button onClick={this.RequestLogin} className="loginBtn" type="submit">Login</button>
                 <Router>
                     <Link to="/signup">
-                        <button onClick={this.RequestRegister} className="blueBtn" type="submit">Register</button>
+                        <button onClick={this.RequestRegister} className="loginBtn" type="submit">Register</button>
                     </Link>
 
                     <Switch>

@@ -163,10 +163,10 @@ class signup extends Component {
             <div className="App-header" >
 
                 <div className="RegisterBox">
-                    <h1>Register</h1>
+                    <h1 className = "headingregister">Register</h1>
                     <input onChange={this.handleChange} name="email" id="emailtxt" className="whiteInput" placeholder="email" />
                     <input onChange={this.handleChange} name="businessName" id="bustxt" className="whiteInput" placeholder="Company Name" />
-                    <select name="service" value={this.state.value} onChange={this.handleChange}>
+                    <select name="service" className="dropbox" value={this.state.value} onChange={this.handleChange}>
                         <option value="Plumbing">Plumbing</option>
                         <option value="Electrical">Electrical</option>
                         <option value="Gardening">Gardening</option>
@@ -183,12 +183,12 @@ class signup extends Component {
                     <input onChange={this.handleChange} name="basicDesc" id="basictxt" className="whiteInput" placeholder="Basic Description" />
                     <input onChange={this.handleChange} name="hourlyRate" id="hourlyrate" className="whiteInput" placeholder="Hourly Rate" />
                     <textarea onChange={this.handleChange} rows="7" cols="50" name="detailDesc" id="detailtxt" className="largeInput" placeholder="Detailed Description" />
-                    <p>Choose company logo:</p>
+                    <p className="debittxt">Choose company logo:</p>
                     <input onChange={this.handleUpload} type="file" className="fileup" name="file" />
                     <img id="test-image" style={{width: 200, height: 200 }} />
                     <p className="debittxt">Press the button below to download the debit order documents required to complete registration</p>
                     <button onClick={this.RequestRegister} className="blueBtn" type="submit">Download Documents</button>
-                    <h4>email documents to: www.mayo.com</h4>
+                    <h4 className = "debittxt">email documents to: www.mayo.com</h4>
                     <input onChange={this.handleChange} name="password" id="passtxt" className="whiteInput" placeholder="Password" type="password" />
                     <input onChange={this.handleChange} name="password2" id="pass2txt" className="whiteInput" placeholder="Confirm Password" type="password" />
                     <button onClick={this.RequestRegister} className="blueBtn" type="submit">Register</button>

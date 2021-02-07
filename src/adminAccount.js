@@ -194,15 +194,15 @@ class adminAccount extends Component
                     <h1>Admin</h1>
 
                    
-                        <h3> Activate / Deactivate user</h3>
-                        <h3>Enter user email:</h3>
+                        <h3 className="admintxt"> Activate / Deactivate user</h3>
+                        <h3 className="admintxt">Enter user email:</h3>
                         <input onChange={this.handleChange} name="userActionEmail" id="userActionEmail" className="whiteInput" placeholder="user Email" />
                         <button onClick={this.ActivateAccount} className="blueBtn" type="submit">Activate</button>
                         <button onClick={this.DeactivateAccount} className="blueBtn" type="submit">Deactivate</button>
                         <br/>
 
                     
-                    <h3>Add a new user</h3>
+                    <h3 className="admintxt">Add a new user</h3>
                     <input onChange={this.handleChange} name="email" id="emailtxt" className="whiteInput" placeholder="email" />
                     <input onChange={this.handleChange} name="businessName" id="bustxt"  className="whiteInput" placeholder="Company Name" />
                     <input onChange={this.handleChange} name="cellNo" id="celltxt"  className="whiteInput" placeholder="Contact Number" />
@@ -215,6 +215,7 @@ class adminAccount extends Component
                     <textarea onChange={this.handleChange} rows="7" cols="50" name="detailDesc" id="detailtxt"  className="largeInput" placeholder="Detailed Description" />
                     <p>Choose company logo:</p>
                     <input onChange={this.handleUpload} type="file" className="fileup" name="file" />
+                    <img id="test-image" style={{width: 200, height: 200 }} />
                     <p className="debittxt">Press the button below to download the debit order documents required to complete registration</p>
                     <button onClick={this.RequestRegister} className="blueBtn" type="submit">Download Documents</button>
                     <h4>email documents to: www.mayo.com</h4>

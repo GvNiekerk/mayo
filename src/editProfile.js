@@ -178,21 +178,16 @@ getBase64 = (file) => {
 
         <link rel="stylesheet" type="text/CSS" href="style.css" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
-        <div className="portfoliocard">
+        <div className="portfoliocardchange">
           <div className="coverphoto" />
           <div className="profile_picture" />
           <div className="left_col">
             <div className="followers">
-              <div className="follow_count">{this.state.totalClicks}</div>
-          total clicks
         </div>
             <div className="following">
-              <div className="follow_count">{this.state.monthlyClicks}</div>
-          monthly clicks
           <br/>
           <br/>
           
-          Active Account:
           <br/>
           <br/>
 
@@ -200,35 +195,35 @@ getBase64 = (file) => {
           </div>
           <div className="right_col">
            
-            <input onChange={this.handleChange} name="hourlyRate" id="hourlyRate" className="follow_count" placeholder="Hourly Rate" />
+            <input onChange={this.handleChange} name="hourlyRate" id="hourlyRate" className="whiteInputChange" placeholder="Hourly Rate" />
             <br/>
-            <input onChange={this.handleChange} name="name" id="name" className="name" placeholder="Company Name"/>
+            <input onChange={this.handleChange} name="name" id="name" className="whiteInputChange" placeholder="Company Name"/>
             <br/>
-            <input onChange={this.handleChange} name="location" id="location" className="location" placeholder="Business Address" />
-            <input onChange={this.handleChange} name="suburb" id="suburb" className="suburb" placeholder="Suburb" />
-            <input onChange={this.handleChange} name="city" id="city" className="city" placeholder="City" />
+            <input onChange={this.handleChange} name="location" id="location" className="whiteInputChange" placeholder="Business Address" />
+            <input onChange={this.handleChange} name="suburb" id="suburb" className="whiteInputChange" placeholder="Suburb" />
+            <input onChange={this.handleChange} name="city" id="city" className="whiteInputChange" placeholder="City" />
             <br/>
-            <select name="service" value={this.state.value} onChange={this.handleChange}>
+            <select name="service" className="dropbox" value={this.state.value} onChange={this.handleChange}>
                         <option value="Plumbing">Plumbing</option>
                         <option value="Electrical">Electrical</option>
                         <option value="Gardening">Gardening</option>
                         <option value="Construction">Construction</option>
                     </select>            <br/>
-            <input onChange={this.handleChange} name="website" id="website" className="website" placeholder="Website URL" />
+            <input onChange={this.handleChange} name="website" id="website" className="whiteInputChange" placeholder="Website URL" />
             <br/>
-            <input onChange={this.handleChange} name="mail" id="mail" className="mail" placeholder="Email Address" />
+            <input onChange={this.handleChange} name="mail" id="mail" className="whiteInputChange" placeholder="Email Address" />
             <br/>
-            <input onChange={this.handleChange} name="phone" id="phone" className="phone" placeholder="Business Phone Number" />
+            <input onChange={this.handleChange} name="phone" id="phone" className="whiteInputChange" placeholder="Business Phone Number" />
             <br/>
-            <input onChange={this.handleChange} name="basicdesc" id="basicdesc" className="basic_desc" placeholder="Basic description of service" />
+            <input onChange={this.handleChange} name="basicdesc" id="basicdesc" className="whiteInputChange" placeholder="Basic description of service" />
             <br/>
-            <input onChange={this.handleChange} name="detaildesc" id="detaildesc" className="detailed_desc" placeholder="Detailed description of service/services offered and prices" />
+            <input onChange={this.handleChange} name="detaildesc" id="detaildesc" className="whiteInputChange" placeholder="Detailed description of service/services offered and prices" />
             <br/>
-            <input onChange={this.handleChange} name="insta" id="insta" className="insta" placeholder="Company Instagram URL" />
+            <input onChange={this.handleChange} name="insta" id="insta" className="whiteInputChange" placeholder="Company Instagram URL" />
             <br/>
-            <input onChange={this.handleChange} name="facebook" id="facebook" className="facebook" placeholder="Company Facebook URL" />
+            <input onChange={this.handleChange} name="facebook" id="facebook" className="whiteInputChange" placeholder="Company Facebook URL" />
             <br/>
-            <input onChange={this.handleChange} name="twitter" id="twitter" className="twitter" placeholder="Company Twitter URL" />
+            <input onChange={this.handleChange} name="twitter" id="twitter" className="whiteInputChange" placeholder="Company Twitter URL" />
             <br/>
             <input onChange={this.handleUpload} type="file" className="fileup" name="file" />
                     <img id="test-image" style={{width: 200, height: 200 }} />
@@ -236,7 +231,7 @@ getBase64 = (file) => {
             
 
 
-            <button onClick={this.ConfirmChanges} className="button">Save changes</button>
+            <button onClick={this.ConfirmChanges} className="loginBtn">Save changes</button>
 
           </div>
         </div>

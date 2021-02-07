@@ -62,12 +62,12 @@ class adminLogin extends Component {
         return (
             <div className="App-header">
                 
-                <h1>Admin Login</h1>
+                <h1 className="heading">Admin Login</h1>
                 <input onChange={this.handleChange} name="email" id="email" className="whiteInput" placeholder="email" />
                 <br />
                 <input onChange={this.handleChange} name="password" id="password" className="whiteInput" placeholder="password" type="password" />
                 <br />
-                <button onClick={this.RequestLogin} className="greenBtn" type="submit">Login</button>
+                <button onClick={this.RequestLogin} className="loginBtn" type="submit">Login</button>
                 
                 <Router>
 

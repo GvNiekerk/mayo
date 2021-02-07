@@ -38,9 +38,6 @@ class Main extends Component {
                     <Link to="/login">
                         <button className="button-home">Login</button>
                     </Link>
-                    <Link to="/recentview">
-                        <button className="button-home">Recently viewed</button>
-                    </Link>
                     <Link to="/adminLogin">
                         <button className="button-home">Admin Login</button>
                     </Link>

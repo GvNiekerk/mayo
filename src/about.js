@@ -20,7 +20,7 @@ class about extends Component
                <div>
                  </div>
                  <div>
-                 <h2 className = "heading">About us</h2>
+                 <h2 className = "aboutheading">About us</h2>
                  <p className = "para">
                      <b>
                     Yes...
@@ -38,7 +38,7 @@ class about extends Component
                     <br/>
                     <Router>
                     <Link to = "/signup">
-                    <button onClick={this.RequestRegister} className="aboutbtn" type="submit">Register</button>
+                    <button onClick={this.RequestRegister} className="loginBtn" type="submit">Register</button>
                     </Link>
 
                     <Switch>

@@ -100,8 +100,8 @@ class account extends Component {
 
               {/* <li className="resume"><a href="#" className="nostyle"></a></li> */}
             </ul>
-            <button onClick={this.OpenEdit} className="button">Edit profile</button>
-            <button className="button">terminate service</button>
+            <button onClick={this.OpenEdit} className="loginBtn">Edit profile</button>
+            <button className="loginBtn">terminate service</button>
 
           </div>
         </div>
