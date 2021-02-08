@@ -95,6 +95,16 @@ class home extends Component {
                         <option value="Electrical">Electrical</option>
                         <option value="Gardening">Gardening</option>
                         <option value="Construction">Construction</option>
+                        <option value="Hair Dresser">Hair Dresser</option>
+                        <option value="Nail Technician">Nail Technician</option>
+                        <option value="Solar Services">Solar services</option>
+                        <option value="Landscaping">Landscaping</option>
+                        <option value="Mechanic">Mechanic</option>
+                        <option value="Cleaning Services">Cleaning Services</option>
+                        <option value="Pet Grooming">Pet Grooming</option>
+                        <option value="Pet Services">Pet services</option>
+                        <option value="Repairman">Repairman</option>
+                        <option value="Internet Services">Internet services</option>
                     </select>
                     <input type="text" name="searchLocation" onChange={this.handleChange} className="whiteInput" placeholder="Location" />
                     <button onClick={this.RequestSearch} className="search-btn" type="button">Search</button>
