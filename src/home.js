@@ -33,7 +33,7 @@ class home extends Component {
     }
 
     getCards = () => {
-        fetch(`http://localhost:3000/home/getlistings?start=${this.state.startIndex}&service=${this.state.service}&location=${this.state.location}`, {
+        fetch(`http://mayocompare.co.za/home/getlistings?start=${this.state.startIndex}&service=${this.state.service}&location=${this.state.location}`, {
             method: "GET",
         }).then((response) => response.json())
             .then((responseJson) => {
@@ -67,7 +67,7 @@ class home extends Component {
         console.log(req);
 
         console.log(JSON.stringify(req));
-        fetch(`http://localhost:3000/home/getlistings?start=${this.state.startIndex}&service=${this.state.service}&location=${this.state.location}`, {
+        fetch(`http://mayocompare.co.za/home/getlistings?start=${this.state.startIndex}&service=${this.state.service}&location=${this.state.location}`, {
             method: "GET",
 
         }).then((response) => response.json())

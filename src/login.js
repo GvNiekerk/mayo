@@ -42,7 +42,7 @@ class Login extends Component {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json')
 
-        fetch("http://localhost:3000/auth/login", {
+        fetch("http://mayocompare.co.za/auth/login", {
             method: "post",
             headers: headers,
             body: JSON.stringify(req),

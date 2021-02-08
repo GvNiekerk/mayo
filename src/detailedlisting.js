@@ -36,7 +36,7 @@ class detailedlisting extends Component {
    // headers.append('Content-Type', 'application/json')
     //headers.append('auth-token', cookies.get('token'))
 
-    fetch(`http://localhost:3000/profile/getUser?userEmail=${this.props.userMail}`, {
+    fetch(`http://mayocompare.co.za/profile/getUser?userEmail=${this.props.userMail}`, {
       method: "GET",
     }).then((response) => response.json())
     .then((responseJson) => {

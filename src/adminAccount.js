@@ -96,7 +96,7 @@ class adminAccount extends Component
         var req = {
             userEmail: userActionEmail
         }
-        fetch("http://localhost:3000/active/activate", {
+        fetch("http://mayocompare.co.za/active/activate", {
             method: "post",
             headers: headers,
             body: JSON.stringify(req),
@@ -119,7 +119,7 @@ class adminAccount extends Component
         var req = {
             userEmail: userActionEmail
         }
-        fetch("http://localhost:3000/active/deactivate", {
+        fetch("http://mayocompare.co.za/active/deactivate", {
             method: "post",
             headers: headers,
             body: JSON.stringify(req),
@@ -158,7 +158,7 @@ class adminAccount extends Component
         var headers = new Headers();
         headers.append('Content-Type', 'application/json')
 
-        fetch("http://localhost:3000/auth/register", {
+        fetch("http://mayocompare.co.za/auth/register", {
             method: "post",
             headers: headers,
             body: JSON.stringify(req),

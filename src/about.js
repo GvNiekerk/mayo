@@ -10,12 +10,12 @@ class about extends Component
      {
         super(props);
      }
-
+    //Button function that does nothing????
     render()
     {
         return (
         <div className="App">
-            
+             
             
                <div>
                  </div>
@@ -23,19 +23,21 @@ class about extends Component
                  <h2 className = "aboutheading">About us</h2>
                  <p className = "para">
                      <b>
-                    Yes...
-                    I thought about that as well
-                    I understand that when you need something done, wheter it's plumbing, seeing a doctor or even cosmetics and the list goes on, you will probaply spend most of your time finding the right one, at the best price possible.
-                    with the click of a button you will now be able to find any service you need deliverd (relevant to your area too) and to make things even better their basic prices will also be listed for you, to ensure that you are taking an informed decision.
+                        We’ve got you sorted!
+                        We understand that when you need something done, you’ll probably spend most of the time
+                        finding the right person at the best possible price. Whether you need a plumber, hair dresser
+                        or even a nail technician, we’ve got you covered! With the click of a button you will be able
+                        to find any service you need delivered in your area. To make things even more convenient –
+                        each provider’s base rates for certain services will be listed to help you make an informed
+                        comparison and decision.
                     <br/>
                     <br/>
-                    How does it work?
-                    I would only be charging an Admin fee of R250 p/m and then invoice you per click of R0.47 so essentially the most a single user could cost you for using me is just R2.82. 
-                    At that amount per user viewing your services the only question left to ask would be, why not Mayo?
+                        Looking to advertise on our site, and gain the exposure you need for you business? Please don't hesitate
+                        to contact us and learn about the process.
                     <br/>
-                    Let me help you increase your publicity and profits.
-                    It’s as simple as downloading a few documents signing them and then emailing it back to me for verification and then you’re sorted.
+                        Contact: 0840118110 to learn more information
                     <br/>
+                    
                     <Router>
                     <Link to = "/signup">
                     <button onClick={this.RequestRegister} className="loginBtn" type="submit">Register</button>

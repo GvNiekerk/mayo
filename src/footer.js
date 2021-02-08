@@ -24,6 +24,10 @@ class footer extends Component
 
       }
 
+      facebookClick(event){
+        event.preventDefault();
+        window.location = ('https://www.facebook.com/Mayocompare-103312438408108');
+      }
 
     render()
     {

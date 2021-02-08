@@ -118,7 +118,7 @@ class signup extends Component {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json')
 
-        fetch("http://localhost:3000/auth/register", {
+        fetch("http://mayocompare.co.za/auth/register", {
             method: "post",
             headers: headers,
             body: JSON.stringify(req),

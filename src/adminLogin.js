@@ -39,7 +39,7 @@ class adminLogin extends Component {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json')
 
-        fetch("http://localhost:3000/admin/login", {
+        fetch("http://mayocompare.co.za/admin/login", {
             method: "post",
             headers: headers,
             body: JSON.stringify(req),

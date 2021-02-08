@@ -90,7 +90,7 @@ getData = () => {
   headers.append('Content-Type', 'application/json')
   headers.append('auth-token', cookies.get('token'))
 
-  fetch("http://localhost:3000/user/getData", {
+  fetch("http://mayocompare.co.za/user/getData", {
     method: "GET",
     headers: headers
   }).then((response) => response.json())
@@ -129,7 +129,7 @@ getData = () => {
         city: this.state.city
     }
     
-        fetch("http://localhost:3000/listing/update", {
+        fetch("http://mayocompare.co.za/listing/update", {
             method: "post",
             headers: headers,
             body: JSON.stringify(req),

@@ -37,7 +37,7 @@ class account extends Component {
     headers.append('Content-Type', 'application/json')
     headers.append('auth-token', cookies.get('token'))
 
-    fetch("http://localhost:3000/user/getData", {
+    fetch("http://mayocompare.co.za/user/getData", {
       method: "GET",
       headers: headers
     }).then((response) => response.json())
