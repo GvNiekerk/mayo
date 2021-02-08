@@ -167,11 +167,21 @@ class signup extends Component {
                     <input onChange={this.handleChange} name="email" id="emailtxt" className="whiteInput" placeholder="email" />
                     <input onChange={this.handleChange} name="businessName" id="bustxt" className="whiteInput" placeholder="Company Name" />
                     <select name="service" className="dropbox" value={this.state.value} onChange={this.handleChange}>
-                        <option >-Select Service-</option>
+                    <option >-Select Service-</option>
                         <option value="Plumbing">Plumbing</option>
                         <option value="Electrical">Electrical</option>
                         <option value="Gardening">Gardening</option>
                         <option value="Construction">Construction</option>
+                        <option value="Hair Dresser">Hair Dresser</option>
+                        <option value="Nail Technician">Nail Technician</option>
+                        <option value="Solar Services">Solar services</option>
+                        <option value="Landscaping">Landscaping</option>
+                        <option value="Mechanic">Mechanic</option>
+                        <option value="Cleaning Services">Cleaning Services</option>
+                        <option value="Pet Grooming">Pet Grooming</option>
+                        <option value="Pet Services">Pet services</option>
+                        <option value="Repairman">Repairman</option>
+                        <option value="Internet Services">Internet services</option>
                     </select>
                     <input onChange={this.handleChange} name="cellNo" id="celltxt" className="whiteInput" placeholder="Contact Number" />
                     <input onChange={this.handleChange} name="website" id="webtxt" className="whiteInput" placeholder="Company Website URL (www.example.com)" />

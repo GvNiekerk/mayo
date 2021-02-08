@@ -65,11 +65,11 @@ class account extends Component {
           <div className="left_col">
             <div className="followers">
               <div className="follow_count">{this.state.totalClicks}</div>
-          total clicks
+          N/A
         </div>
             <div className="following">
               <div className="follow_count">{this.state.monthlyClicks}</div>
-          monthly clicks
+          N/A
           <br/>
           <br/>
           <div className="follow_count">{this.state.active.toString()}</div>

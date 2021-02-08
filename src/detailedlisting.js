@@ -8,8 +8,6 @@ class detailedlisting extends Component {
     
 
     this.state = {
-      totalClicks: 0,
-      monthlyClicks: 0,
       name: "N/A",
       location: "N/A",
       suburb: 'N/A',
@@ -60,21 +58,16 @@ class detailedlisting extends Component {
           <div className="coverphoto" />
           <img src={this.state.profileImage} className="profile_picture" />
           <div className="left_col">
-            <div className="followers">
-              <div className="follow_count">{this.state.totalClicks}</div>
-          total clicks
-        </div>
+         
             <div className="following">
-              <div className="follow_count">{this.state.monthlyClicks}</div>
-          monthly clicks
+              
           <br/>
           <br/>
-          <div className="follow_count">{this.state.active.toString()}</div>
-          Active Account:
+         
           <br/>
           <br/>
           <div className="follow_count">{this.state.hourlyRate}</div>
-          Your Rate:
+          Hourly Rate:
 
         </div>
           </div>
