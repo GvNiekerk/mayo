@@ -1,4 +1,3 @@
-  
 FROM node
 
 RUN mkdir -p /srv/app/frontend
@@ -11,6 +10,6 @@ RUN npm install
 
 COPY . /srv/app/frontend
 
-EXPOSE 9090
+EXPOSE 3000
 
 CMD ["npm", "start"]
